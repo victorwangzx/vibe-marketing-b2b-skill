@@ -1,11 +1,11 @@
 ---
 name: vibe-marketing-b2b
-description: Create 2B vibe marketing strategy, content matrices, Xiaohongshu/Douyin cover concepts, and sales funnel copy for business partnerships, especially education/training机构合作获客.
+description: Create 2B vibe marketing strategy, content matrices, Xiaohongshu/Douyin cover concepts, Toutiao/头条号 articles and covers, and sales funnel copy for business partnerships, especially education/training机构合作获客.
 ---
 
 # Vibe Marketing B2B
 
-Use this skill when the user asks to plan, package, or batch-produce content for 2B partnership acquisition using vibe marketing, especially for selling a new course/product line to existing institutions. This skill can produce strategy, content planning, covers, publishable copy, editable short-video design drafts, short-video scripts, rendered video directions, and platform-specific derivatives.
+Use this skill when the user asks to plan, package, or batch-produce content for 2B partnership acquisition using vibe marketing, especially for selling a new course/product line to existing institutions. This skill can produce strategy, content planning, covers, publishable copy, Toutiao/头条号 articles, editable short-video design drafts, short-video scripts, rendered video directions, and platform-specific derivatives.
 
 The user's current priority example is selling a designed "科创赛考" course system to B-end training institutions that already run English, programming, robotics, science experiment, AI literacy,研学, or素质教育业务 and need a new growth product line.
 
@@ -17,7 +17,7 @@ Do not treat vibe marketing as "make it look attractive". Treat it as packaging 
 - Buyer: owner, campus principal, curriculum director, channel partner.
 - Real operating pain: enrollment, renewal,客单价,成果交付, teacher delivery, parent-facing value.
 - Fit boundary: who should not respond, so sales effort is not wasted.
-- Platform and artifact type: Xiaohongshu note, Douyin video, Toutiao cover, content matrix, cooperation pitch, etc.
+- Platform and artifact type: Xiaohongshu note, Douyin video, Toutiao article/cover, content matrix, cooperation pitch, etc.
 
 If the user has already approved a title, pain point, audience, hook, or visual direction, preserve it as locked strategy unless the user explicitly asks to change it.
 
@@ -101,6 +101,7 @@ Common deliverables include:
 - Complete single-post package: video, cover as the video's first frame, editor's note/body copy, 5 related hot tags, and lead-quality filter.
 - Xiaohongshu cover or image-set direction.
 - Toutiao 4:3 cover direction.
+- Toutiao/头条号简明文章: use plain owner-facing language to explain one B2B opportunity, with life analogies for obscure terms when needed, plus 5 related tags.
 - Douyin/Xiaohongshu vertical short-video design draft, plan, or rendered-video specification.
 - Cross-platform adaptation while preserving approved titles and strategy.
 - QA checklist for visual, copy, platform, and lead-quality risks.

@@ -20,7 +20,7 @@ Default sequence for a full platform content item:
 1. Structure the user's topic input.
 2. Diagnose target institution, buyer, real pain, fit timing, and unsuitable leads.
 3. Choose the content type and core point of view.
-4. Draft the single-post package: title, editor's note, lead-quality filter, and 5 related hot tags.
+4. Draft the publishable copy package: title, editor's note or Toutiao article body, lead-quality filter, and platform-appropriate tags when needed.
 5. Design the cover as the video's first frame.
 6. Create the editable short-video design draft.
 7. Wait for the user's draft confirmation unless explicitly told to proceed.
@@ -265,3 +265,33 @@ Must state:
 - Any remaining known limitations.
 
 Do not claim "final" if visual inspection was not performed.
+
+## Deliverable 11: Toutiao Account Article
+
+Use when the user asks for 今日头条, 头条号, article copy, or a longer owner-facing article rather than a Xiaohongshu note or short video.
+
+Must include:
+
+- A clear article title aimed at one specific B-end owner type.
+- A short editor's-note-style opening under 100 Chinese characters. It should make the stakes clear, show why this specific reader should finish the article, and change with each issue's target audience rather than using a generic lead.
+- A short opening paragraph that names the owner's real business scene.
+- A simple explanation of the business pain, product-line opportunity, fit timing, and unsuitable cases.
+- Concrete examples from daily operation: parent communication, renewal, trial class,作品展示, teacher delivery, or成果汇报.
+- Plain explanations for any necessary obscure terms. Use life-related analogies such as "可以理解为..." or "就像..." when they make the concept easier to grasp.
+- A soft closing connection to a diagnostic conversation, pilot attempt, trial path, or "神笔马良AI智绘教室" when appropriate.
+- Exactly 5 related tags for Toutiao/头条号 publishing. Tags should match the target reader, institution type, business pain, product direction, and education category; avoid broad tags that attract invalid C-end traffic.
+- Optional 3-5 short subheadings. Use only enough structure to help the reader scan.
+
+Style requirements:
+
+- Keep it concise by default, usually 800-1500 Chinese characters unless the user asks for another length.
+- The first 100 Chinese characters should carry the article's business tension: what the reader may miss, waste, lose, or gain by reading on.
+- Use short paragraphs and plain business language that an institution owner can understand quickly.
+- Define necessary terms the first time they appear.
+- Use one analogy at a time. The analogy should clarify the business logic, not turn the article into a joke or C-end parent essay.
+- Avoid headline-party sensationalism, exaggerated promises, fake cases/data, dense academic language, and hard招商 tone.
+
+Quality bar:
+
+- The article should read like a practical column for an owner, not a Xiaohongshu note, academic essay, or sales landing page.
+- The reader should understand why the topic matters, how to judge fit, what risk to avoid, and what low-risk next step to take.
