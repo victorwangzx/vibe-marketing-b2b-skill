@@ -100,7 +100,7 @@ Common deliverables include:
 - Content matrix for a specific institution type.
 - Complete single-post package: video, cover as the video's first frame, editor's note/body copy, 5 related hot tags, and lead-quality filter.
 - Xiaohongshu cover or image-set direction.
-- Toutiao 4:3 cover direction.
+- Toutiao 4:3 article cover: a dedicated landscape cover with one large title, a clear business scene, and no reuse/cropping of the Xiaohongshu cover.
 - Toutiao/头条号简明文章: use plain owner-facing language to explain one B2B opportunity, with life analogies for obscure terms when needed, plus 5 related tags.
 - Douyin/Xiaohongshu vertical short-video design draft, plan, or rendered-video specification.
 - Cross-platform adaptation while preserving approved titles and strategy.
@@ -108,7 +108,7 @@ Common deliverables include:
 
 For short-video production, read [references/video-design-draft.md](references/video-design-draft.md) before rendering. By default, produce an editable Markdown video design draft first so the user can revise details directly in the file; render only after the draft is approved or the user explicitly asks to skip the draft.
 
-Default final package for a platform content item is: rendered video, cover integrated as the video's first frame, editor's note, and exactly 5 relevant hot tags. If the user asks only for planning or drafting, stop at the requested pre-production deliverable.
+Default final package for a Xiaohongshu/Douyin platform content item is: rendered video, cover integrated as the video's first frame, editor's note, and exactly 5 relevant hot tags. When a Toutiao article is included, also provide a dedicated Toutiao 4:3 cover and exactly 5 related Toutiao tags. If the user asks only for planning or drafting, stop at the requested pre-production deliverable.
 
 ## Cover Formulas
 

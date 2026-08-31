@@ -21,7 +21,7 @@ Default sequence for a full platform content item:
 2. Diagnose target institution, buyer, real pain, fit timing, and unsuitable leads.
 3. Choose the content type and core point of view.
 4. Draft the publishable copy package: title, editor's note or Toutiao article body, lead-quality filter, and platform-appropriate tags when needed.
-5. Design the cover as the video's first frame.
+5. Design the Xiaohongshu/Douyin cover as the video's first frame, and design a dedicated Toutiao 4:3 cover when a Toutiao article is included.
 6. Create the editable short-video design draft.
 7. Wait for the user's draft confirmation unless explicitly told to proceed.
 8. Check production dependencies and commercial-use assumptions when rendering is requested.
@@ -46,6 +46,12 @@ For a full Xiaohongshu/Douyin-style B2B content item, the final deliverables are
 - Exactly 5 related hot tags.
 
 The video first frame should carry the approved cover title and visual signal. If a separate image file is also exported for upload convenience, it must match the first frame's title, hierarchy, and core visual unless the user explicitly requests a platform-specific variant.
+
+When a Toutiao/头条号 article is part of the package, also deliver:
+
+- Toutiao account article.
+- Dedicated Toutiao 4:3 cover.
+- Exactly 5 related Toutiao tags.
 
 ## Deliverable 1: Opportunity Positioning
 
@@ -134,17 +140,33 @@ Default format:
 
 - Dedicated 4:3 landscape cover.
 - Do not crop a Xiaohongshu cover into Toutiao format.
+- Build a separate composition for Toutiao even when the title and visual theme come from an approved Xiaohongshu/Douyin item.
 
 Must include:
 
 - The approved title if one exists.
 - One supporting phrase or filter at most.
 - A clear business scene or outcome visual.
+- One strong owner-facing business signal: current institution type, operating pain, product-line opportunity, visible student outcome, or cooperation direction.
 
 Quality bar:
 
 - It should look like a business/opinion article cover for an owner browsing a feed, not like a vertical social poster forced sideways.
 - Preserve the approved hook; do not rewrite it into a more explanatory article sentence unless asked.
+- Prefer one large title plus a core visual scene. Avoid dense text cards, secondary checklists, long source badges, and explanatory panels unless explicitly requested.
+- Use a real or realistic business/education scene first, then add deterministic local typography. Do not rely on AI-generated Chinese text.
+- Keep product, people, parent expressions, project work, classroom action, or other visual evidence inspectable.
+- Place text in low-information or reserved areas. Do not cover faces, hands, key objects, project work, or the visual contrast that explains the story.
+- If text needs a background, use a measured semi-transparent block, chip, or panel at 20%-50% opacity according to the actual image. Avoid broad top/bottom masks, gray veils, or large overlays that split the image into two color zones.
+- Size text backgrounds from the actual text length and line count. Align text visually inside its background, not by rough fixed offsets.
+
+QA:
+
+- Inspect the final 4:3 canvas, not a cropped preview.
+- Confirm the approved title is preserved.
+- Check text readability, line breaks, punctuation, and no single-character orphan lines.
+- Confirm no generated-text remnants remain in the background.
+- Confirm text and panels do not cover core people, hands, project objects, business signage, or outcome evidence.
 
 ## Deliverable 6: Short-Video Design Draft
 
