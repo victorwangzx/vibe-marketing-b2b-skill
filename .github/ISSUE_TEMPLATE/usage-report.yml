@@ -1,0 +1,45 @@
+name: Usage report
+description: Tell us how you used this B2B vibe marketing skill.
+title: "[Usage] "
+labels:
+  - usage-report
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for using this skill.
+        Please do not share private customer data, contact lists, unpublished commercial plans, or confidential partner information.
+  - type: input
+    id: user_role
+    attributes:
+      label: Your role
+      description: e.g. founder, marketer, education service provider, school partnership manager
+    validations:
+      required: false
+  - type: input
+    id: industry
+    attributes:
+      label: Industry or scenario
+      description: e.g. education, school services, training, SaaS, local services
+    validations:
+      required: false
+  - type: dropdown
+    id: output_type
+    attributes:
+      label: Output type used
+      options:
+        - Xiaohongshu copy
+        - Douyin/video script
+        - Toutiao article or cover
+        - Topic/content matrix
+        - Sales or partnership copy
+        - Other
+    validations:
+      required: false
+  - type: textarea
+    id: feedback
+    attributes:
+      label: What worked or needs improvement?
+      description: Share only non-sensitive feedback.
+    validations:
+      required: false

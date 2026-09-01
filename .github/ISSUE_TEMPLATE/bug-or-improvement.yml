@@ -1,0 +1,44 @@
+name: Bug or improvement
+description: Report a problem or suggest an improvement.
+title: "[Feedback] "
+labels:
+  - feedback
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please remove private customer data, school/contact names, unpublished strategies, and confidential partner information before posting.
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Type
+      options:
+        - Bug
+        - Copywriting quality issue
+        - Platform rule/compliance issue
+        - Visual/cover issue
+        - Documentation improvement
+        - Feature request
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should the skill have done?
+    validations:
+      required: false
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Non-sensitive context
+      description: Platform, industry, target audience, and safe reproduction details.
+    validations:
+      required: false
