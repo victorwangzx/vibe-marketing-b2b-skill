@@ -6,7 +6,7 @@ Use this reference when the user asks for a short video, rendered video, Remotio
 
 The short-video design draft is a required pre-production deliverable unless the user explicitly asks to skip it. It gives the user a Markdown file they can edit directly before voiceover synthesis, asset production, or rendering.
 
-Do not treat the draft as a loose script. It is the main quality gate for the final rendered video. It should lock the business logic, shot design, shot-size variation, visual logic, first-frame cover, first-3-second hook, voiceover wording, on-screen text, editor's note, 5 related hot tags, and risk boundaries before production starts.
+Do not treat the draft as a loose script. It is the main quality gate for the final rendered video. It should lock the business logic, film-style scene design, shot design, shot-size variation, per-scene key visuals or visual-effect mockups, visual logic, first-frame cover, first-3-second hook, voiceover wording, on-screen text, editor's note, 5 related hot tags, and risk boundaries before production starts.
 
 The video design draft must be confirmed as its own step. Do not move into image generation, voiceover generation, Remotion/HyperFrames implementation, or rendering until the user has had a chance to edit the Markdown file and explicitly approve the draft, unless the user explicitly says to skip this confirmation.
 
@@ -25,7 +25,8 @@ Every B2B video design draft should include these sections:
 - First-frame cover: the video opening frame should also serve as the platform cover unless the user explicitly requests a separate cover.
 - B2B diagnosis: real operating pain, qualified audience, unsuitable leads, and why the timing is appropriate.
 - First-3-second hook: voiceover opening, on-screen text, visual motion, and why it should stop the intended B-end buyer.
-- Video structure: scene-by-scene plan with time range, shot size, camera/viewpoint, picture, screen text, production-ready voiceover, rhythm/motion, and transition notes.
+- Film-style scene structure: scene-by-scene plan with narrative function, time range, shot size, camera/viewpoint, picture, screen text, production-ready voiceover, rhythm/motion, and transition notes.
+- Per-scene visual-effect plan: the intended still/keyframe, generated-scene prompt, layout sketch, or logic-card design for each scene, so production does not become one cover image with changing subtitles.
 - Case/evidence overlay: concrete examples, mini cases, or operational facts that are too long for voiceover but useful for pause-reading.
 - Visual style: scene type, subject priority, attention zone, safe text region, and what must not be covered.
 - Subtitle and layout rules: maximum text density, font choices, panel behavior, line-break risks, and overflow prevention.
@@ -37,15 +38,16 @@ Every B2B video design draft should include these sections:
 
 ## Scene Table Standard
 
-For the video structure, prefer a table or repeated scene blocks. Each scene must specify:
+For the video structure, use film-style scenes or logical acts rather than a single poster stretched across the audio. Prefer a table or repeated scene blocks. Each scene must specify:
 
 - Time range or approximate duration.
 - Narrative function: hook, pain, boundary, solution logic, timing, trial path, or closing.
 - Shot size and viewpoint: wide shot, medium shot, close-up, extreme close-up, over-the-shoulder, top-down, screen/board view, or abstract logic view.
 - Picture: what viewers see, including people, objects, business setting, or abstract logic graphics.
+- Key visual or visual-effect mockup: the planned still frame, generated scene direction, layout sketch, or logic card that should exist before rendering.
 - On-screen text: short enough to read on mobile.
 - Voiceover: exact production-ready line, not only a summary. Mixed English terms should already be translated or otherwise handled according to the term checklist.
-- Motion: concrete movement such as push-in, card reveal, comparison switch, path highlight, number emphasis, or scene transition.
+- Motion: concrete Remotion-friendly movement such as push-in, pull-back, parallax, card reveal, comparison switch, path highlight, number emphasis, spotlight mask, lower-third reveal, or scene transition.
 - Layout note: where text goes and what visual subject must remain visible.
 - Case/evidence overlay: whether this scene needs a pause-readable example, where it appears, and how long it stays.
 - QA note: possible overflow, subject occlusion, visual fatigue, or platform risk.
@@ -70,10 +72,15 @@ Rules:
 - Each shot-size choice should support the message. Do not add random close-ups just for variety.
 - If the video uses generated scenes, specify the subject, action, and viewpoint for each scene so image generation and Remotion layout do not flatten everything into the same poster-like view.
 - If the scene is a logic card rather than a realistic image, name it as an abstract logic view and define its layout hierarchy.
+- For each scene, decide whether it needs a separate generated visual, a derived keyframe from the cover style, a clean logic card, or a Remotion-only graphic state. Do not assume the opening cover can serve every scene.
+- If a scene is supposed to prove a school or business situation, use a real/provided clip or a generated/selected raster scene image with recognizable people, space, objects, and actions. Do not replace it with hand-coded circles, boxes, stick figures, or generic icons unless the user explicitly asks for a simplified schematic style.
+- Use Remotion motion to clarify the business logic: reveal causes one by one, highlight the decision path, compare before/after states, move attention from owner pain to student outcome, or transition from scene evidence to solution map.
 
 ## Production-Ready Voiceover
 
 The voiceover in the design draft should be the version intended for synthesis, not a rough outline.
+
+For rendered B2B promotional, sales, product-introduction, service-introduction, cooperation-pitch, or course-package videos, the design draft must include production-ready voiceover and the final video must include synthesized Chinese narration by default. Use a no-voiceover plan only when the user explicitly asks for silent/subtitle-only/visual-only output.
 
 - Convert or handle English acronyms, mixed Chinese-English terms, and technical terms before production.
 - For Kokoro voiceover, use confirmed Chinese equivalents where appropriate, such as `STEM` -> `科创融合课程`, `PBL` -> `项目化学习`, `GPT` -> `生成式人工智能工具`, and semantic `AI` -> `人工智能`.
@@ -116,9 +123,12 @@ Bottom placement requirements:
 ## Hard Rules Before Rendering
 
 - Do not generate voiceover, images, or rendered video until the design draft is approved, unless the user explicitly says to proceed without draft approval.
+- Do not skip voiceover for a promotional/service-introduction video because terminology is inconvenient. Resolve the terminology first or use confirmed Chinese wording, then synthesize narration.
 - Before voiceover, present the voiceover term checklist for confirmation if the script contains mixed Chinese-English terms, acronyms, brand English, product names, or technical terms.
 - The first 3 seconds must combine picture, voiceover, on-screen copy, and visible motion/information change. Do not use a static cover hold as the only opening design.
 - Do not stretch one scene image through the entire video. Plan multiple scenes or logical states.
+- Do not enter rendering until each scene has a defined key visual or visual-effect plan. A scene may be a realistic generated image, a crop/detail of a larger scene, a logic-card composition, or a Remotion animated graphic state, but it must be intentional.
+- Before rendering a scene-based video, inspect or generate the scene assets first and reject assets that are hard to understand, look like random shapes, contain unusable AI text, or fail to show the intended school/business action. Scene recognizability is a production gate, not a polish pass.
 - Keep the video B-end facing. If the wording sounds like advice to parents, rewrite before production.
 - Keep on-screen text sparse. Avoid dense text over realistic scene images; use logic cards, labels, or staged reveals instead.
 - Panels and text backgrounds must be sized from actual text length and line count during production.
@@ -135,6 +145,7 @@ Design around how mobile viewers scan short video:
 - Do not cover faces, hands, project work, child actions, teacher actions, parent expressions, or objects that prove the business scene.
 - Do not use broad masks that split the frame into obvious color halves or hide the generated scene.
 - Keep subtitles and bottom labels inside safe margins so platform UI and cropping do not cut them.
+- During QA, check whether each scene can be described correctly without reading the subtitle. If the answer is unclear, the scene is not acceptable for a scene-based deliverable.
 
 ## Draft Template
 
@@ -179,9 +190,13 @@ Use this structure when creating a new draft:
 
 ### 0-3s <场景名>
 
+叙事功能：
+
 景别/视角：
 
 画面：
+
+关键视觉/效果图：
 
 屏幕文字：
 
@@ -189,7 +204,7 @@ Use this structure when creating a new draft:
 
 口播：
 
-节奏/转场：
+Remotion动效/节奏/转场：
 
 布局与QA：
 

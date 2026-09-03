@@ -74,6 +74,8 @@ Final Chinese text on covers and video stills must be added locally with real fo
 
 For a short 2B explainer or cooperation pitch, do not stretch one background image through the whole video with only slight movement.
 
+For B2B promotional, sales, product-introduction, service-introduction, cooperation-pitch, or course-package videos, Chinese narration is required by default. A no-voiceover video is valid only when the user explicitly asks for a silent, subtitle-only, poster-loop, background-screen, or visual-only version. Do not treat subtitles or background music as a substitute for the spoken pitch.
+
 Minimum expectation:
 
 - Produce an editable short-video design draft first when the user is asking for video production. The draft should be saved as a Markdown file under the task output folder, and production must wait until the user approves or explicitly skips the draft step. This confirmation is separate from approving the topic or title.
@@ -81,6 +83,7 @@ Minimum expectation:
 - Good first-3-second hooks can use Douyin-style opening logic adapted for B2B: sharp question, assumption reversal, pain scene, before/after contrast, trend signal, or "not X, but Y" framing. Keep the hook qualified so it attracts the right institution owner instead of broad C-end curiosity.
 - If a designed cover with an existing title is used as the opening background, do not place dynamic hook text near that title or existing cover labels. Create a separate hook zone with enough visual distance, preferably in the middle or upper-middle space below the title and above the main subjects, so the motion adds hierarchy instead of visual clutter.
 - Several distinct scenes or visual states that match the narration beats.
+- For publishable videos, "scene" means a visually recognizable situation, not just a programmatically drawn card or abstract layout. A valid scene should be immediately identifiable as a classroom, school corridor, teacher preparation desk,教研会, parent meeting, project-making table,科技节展示, student presentation, product demo, or other concrete business/school workflow. Abstract logic cards may support a transition or summarize a path, but they cannot be the main visual evidence for most scenes unless the requested video is explicitly an infographic-only style.
 - Deliberate shot-size variation across scenes: wide, medium, close-up, extreme close-up, over-the-shoulder, top-down, screen/board, or abstract logic views. Avoid a sequence of same-size poster-like scenes that creates fatigue.
 - On-screen headings that advance the logic: hook, pain, boundary, product logic, timing, trial path.
 - Concrete examples that are too long for voiceover may appear as pause-readable case/evidence overlays, but they must be planned in the video design draft rather than added casually during rendering. Treat these overlays as supplemental bottom information strips by default, similar to print footnotes or editorial lower-thirds; only use side notes or separate logic cards when the bottom would cover key visual evidence or conflict with subtitles.
@@ -88,6 +91,7 @@ Minimum expectation:
 - If using local Kokoro voiceover, check sentence segmentation and gaps. Avoid unnatural long pauses from line-by-line synthesis.
 - If a brand name contains an English acronym such as "AI", keep the visual brand name unchanged and make the voiceover use standard English-letter pronunciation. Prefer a tested pronunciation form such as "A-I" when the TTS model otherwise weakens or misreads the abbreviation. Do not use Chinese-character approximations such as "诶、爱", and do not replace brand-name "AI" with "人工智能".
 - Before generating voiceover, scan the script for mixed Chinese-English terms, acronyms, brand English, and technical labels. The video design draft should already contain the production-ready, localized voiceover wording plus a confirmation checklist: keep visually, translate in voiceover, or use voiceover-only wording. For Kokoro, prefer confirmed pure-Chinese wording instead of forcing English acronym pronunciation. Current confirmed mappings: "STEM" -> "科创融合课程", "PBL" -> "项目化学习", "GPT" -> "生成式人工智能工具", semantic "AI" -> "人工智能".
+- Unresolved voiceover terminology is a blocker to voiceover production, not permission to omit narration. Confirm the terms or use approved plain-Chinese wording before rendering.
 
 ## 8. Video Copy QA Comes Before Rendering
 
@@ -125,13 +129,14 @@ For videos, inspect:
 - The first frame works as the cover: approved title, hierarchy, thumbnail readability, and business signal are visible before motion starts.
 - The first 3 seconds separately: at least 2-3 sampled frames should show meaningful visual or information progression, and the visible text should match the spoken hook.
 - Key frames from every scene, not only the first frame.
+- Scene recognizability: each sampled scene should be understandable without relying on the subtitle. If a viewer cannot tell whether the image is a classroom,教研会, project-making table,科技节展示, teacher workflow, product demo, or other intended situation, the scene fails QA even if the file renders and the text is readable.
 - Shot sizes/viewpoints vary enough to avoid visual fatigue and match the scene function.
 - Bottom subtitles and labels fully contained within their backgrounds.
 - Case/evidence overlays remain readable when paused, are not falsely presented as verified proof, sit inside left/right safe margins, and do not cover the scene evidence they are meant to support.
 - Text background opacity sits within the 20%-50% range unless the scene is intentionally a flat logic card.
 - Panel height and width adapt to actual line count and text length.
 - No punctuation or one-character orphan lines in visible Chinese text.
-- Audio track exists, duration is reasonable, and volume is not silent.
+- Audio track exists, contains the required narration unless explicitly waived by the user, duration is reasonable, and volume is not silent.
 - On-screen copy remains B-end facing throughout.
 - Final editor's note is present with exactly 5 relevant hot tags when a full platform content package is requested.
 

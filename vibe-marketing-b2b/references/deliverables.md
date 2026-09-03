@@ -179,6 +179,8 @@ Must include:
 - B-end diagnosis: real pain, qualified audience, unsuitable leads, timing, and low-risk next step.
 - First-3-seconds hook design: picture, voiceover, on-screen text, visible motion/information change, and why it fits the target buyer.
 - Scene-by-scene structure: time range, shot size/viewpoint, picture, on-screen text, case/evidence overlay, exact production-ready voiceover, motion, layout notes, and QA risks.
+- Film-style scene design: split the video into deliberate scenes or logical acts, each with a narrative function, visual mood, main subject, shot size/viewpoint, transition, and planned motion effect.
+- Per-scene visual-effect plan: for each scene, define the intended visual still/keyframe or effect mockup before rendering so production does not stretch one cover image through the full video.
 - Visual, subtitle, sound, voiceover-term, publishable-copy, and risk-boundary sections.
 - Pending confirmation items the user can directly edit before production.
 - Explicit design-draft confirmation status before moving into voiceover, image generation, Remotion/HyperFrames work, or rendering.
@@ -189,6 +191,7 @@ Quality bar:
 - Do not generate images, synthesize voiceover, implement the video, or render before the draft is approved unless the user explicitly asks to skip this step.
 - It must stay B-end facing and avoid C-end parent advice unless parent behavior is used to explain an institution operating pain.
 - Shot design should vary across the video. Use wide, medium, close-up, extreme close-up, over-the-shoulder, top-down, screen/board, and abstract logic views deliberately so the viewer does not tire of one repeated composition.
+- Scene design should follow a film-like sequence rather than a single poster: opening hook, pain scene, cause/reversal, solution path, fit timing, and closing action can each use different visual treatment when appropriate.
 - Voiceover in the draft must already handle terminology and English localization decisions. Unresolved pronunciation or translation choices belong in the confirmation table, not in the production script.
 
 ## Deliverable 7: Short-Video Script
@@ -229,14 +232,18 @@ Use when the user asks to produce, render, or make the video.
 Default format:
 
 - Vertical 9:16, 1080 x 1920 for Xiaohongshu/Douyin unless otherwise requested.
-- Use local Kokoro voiceover by default when narration is needed, following workspace video preferences.
+- Use local Kokoro voiceover by default for B2B promotional, sales, product-introduction, service-introduction, cooperation-pitch, or course-package videos. In these cases narration is considered necessary unless the user explicitly requests a silent, subtitle-only, poster-loop, background-screen, or visual-only version.
 
 Hard requirements:
 
 - Do not make a one-image video unless the user explicitly asks for a static poster video.
+- Do not deliver a promotional/service-introduction video with only music and subtitles unless the user explicitly approved that format. Voiceover is the primary carrier of the business argument; on-screen text supports it rather than replacing it.
+- If voiceover terminology is unresolved, do not omit narration as a workaround. Confirm the term handling first, or use confirmed workspace mappings and plain Chinese wording that avoids the unresolved term in the spoken script.
 - The approved cover should be integrated as the first frame of the video unless the user explicitly requests a different opening.
 - Design the first 3 seconds deliberately as an opening hook that combines picture, voice, and on-screen copy. It should show a clear change, question, contrast, or business signal before the viewer swipes away.
 - Use multiple scenes or dynamic logic states: diagnosis, comparison, path map, checklist, timeline, flow, or project evidence.
+- Each scene should have its own planned visual treatment or key visual. Do not rely on the cover/background image plus changing subtitles as the main video design.
+- Use Remotion animation deliberately to enrich the picture: camera push/pull, parallax, staged text reveals, comparison switches, path highlights, card flips, spotlight masks, number emphasis, lower-third overlays, or scene transitions. Motion should clarify the business logic, not decorate randomly.
 - Segment narration by scene and align scene durations to segment-level audio timing.
 - Avoid large subtitle blocks. On-screen copy should be short, readable, and integrated into the visual logic.
 - Text backgrounds must be generated from measured text size and line count; no fixed-size panels for variable text.
@@ -250,6 +257,7 @@ QA:
 - Inspect key frames from every scene, not arbitrary intervals that miss scenes.
 - Check text overflow, panel fit, and whether any text/panel covers core people or objects.
 - Confirm the video has meaningful visual changes during long voiceover segments.
+- Confirm every scene has a distinct visual state, key visual, or Remotion motion effect that supports that scene's narrative function.
 
 ## Deliverable 9: Platform Adaptation
 

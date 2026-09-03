@@ -140,6 +140,10 @@ For any final artifact, report only the useful deliverable and the checks actual
 
 ## Voiceover Term Confirmation
 
+For rendered B2B promotional, sales, product-introduction, service-introduction, cooperation-pitch, or course-package videos, Chinese voiceover is required by default. A no-voiceover video is allowed only when the user explicitly asks for a silent, subtitle-only, poster-loop, background-screen, or visual-only version.
+
+Do not treat unresolved terminology as permission to omit narration. If terms need confirmation, pause before synthesis and ask for term handling, or choose already-confirmed Chinese wording when the workspace/user rules provide it. The final promotional video should not be downgraded to moving slides with music unless the user explicitly approves that format.
+
 Before generating Chinese voiceover, scan the script for mixed Chinese-English terms, acronyms, brand English, product names, and technical terms. Present a pronunciation/translation checklist for user confirmation first, stating which terms will remain as-is on screen, which terms will be translated in voiceover, and which voiceover-only wording will be used.
 
 For Kokoro voiceover, prefer confirmed pure-Chinese wording instead of forcing English acronym pronunciation. Current confirmed mappings:
