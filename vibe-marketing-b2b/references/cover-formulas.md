@@ -47,11 +47,28 @@ Default canvas: 1080 x 1920.
 - Main title, subtitle, key qualifier, and speech-bubble bodies must stay inside this safe box.
 - Speech-bubble tails or visual pointers may extend slightly outside the safe box only when they do not cover faces, hands, key objects, or the action that explains the scene.
 - Keep at least 48 px of apparent padding between text and its panel, label, chip, or bubble edge. Align text by visible glyph bounds, not baseline-only offsets.
-- Use local typography, strokes, shadows, or small semi-transparent panels in low-information areas for readability.
+- Use local typography or small semi-transparent panels in low-information areas for readability. Only the main large title may use subtle stroke, shadow, highlight edge, or emboss-like effects when needed; body text, notes, tags, chips, labels, and supporting phrases must not use white emboss, white highlight shadow, glow, stroke, or similar decorative readability effects.
 - Do not use broad full-width masks, top/bottom overlays, or large gray/color veils that change half of the image's tone just to make text readable.
 - Text panels, labels, and bubbles must not cover core visual information: faces, hands, children's project work, teacher actions, parent expressions, product evidence, or the contrast that makes the cover persuasive.
 
 For final delivery, a 3:4 thumbnail crop can still be used as verification. The design rule is that the text should already be safe before that QA step.
+
+## Today Visual Format Defaults
+
+Use these defaults for Xiaohongshu/Douyin 9:16 covers, video first frames, and vertical visual tests when the user has not specified a different visual system:
+
+- Canvas: `1080 x 1920`.
+- Write and design visible copy for the actual target audience, not for the user. Do not place internal workflow labels such as "选题", "交付", "素材", "脚本", "设计稿", "版本", or approval/review wording on the visible artifact.
+- The visual must use a recognizable scene or clearly reserved text area. Do not treat abstract shapes, generic icon cards, or hard-to-identify programmatic drawings as scene evidence.
+- Main title: `120 pt`, preferably Alimama ShuHeiTi. It may use a subtle stroke, shadow, or highlight edge only when needed for hierarchy or readability.
+- Body/supporting text: `60 pt`, preferably Alibaba PuHuiTi Medium. Do not add white emboss, white highlight shadow, glow, stroke, or similar effects.
+- Note/remark text: `35 pt`, preferably Alibaba PuHuiTi Regular. Do not add white emboss, white highlight shadow, glow, stroke, or similar effects.
+- If text needs a background, use a measured rounded rectangle filled with `30% white` by default.
+- Rounded text backgrounds should use an Apple-like corner radius: soft and visible, but not oversized. As a practical starting point on a 1080 x 1920 canvas, use about `24-36 px` radius depending on the block size.
+- Text backgrounds must be sized from the actual text bounding box and line count, with comfortable padding and visual vertical centering.
+- Do not cover faces, hands, teaching actions, product evidence, project work, or the visual contrast that explains the story. A semi-transparent background does not make subject occlusion acceptable.
+- For body/supporting/remark text, use placement, contrast, font weight, and the 30% white rounded background to solve readability rather than adding decorative text effects.
+- These values are defaults for consistency, not permission to force dense copy into one image. Shorten wording or adjust layout before shrinking text unless the user asks for a compact information card.
 
 ## 1. 原业务 + 新业务 + 转型结果
 

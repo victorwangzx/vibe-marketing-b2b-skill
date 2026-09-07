@@ -59,7 +59,7 @@ The purpose of generating people, facial expressions, hands, project objects, an
 - Place text in low-information areas or in a deliberately reserved text zone.
 - Semi-transparent panels are preferred, but transparency does not excuse covering faces, hands, project work, or the contrast that explains the story.
 - Do not use broad top/bottom masks, gray veils, or large overlays that split the image into visibly different color zones just for readability.
-- Use deterministic local typography, text stroke, shadow, and small panels before sacrificing the scene.
+- Use deterministic local typography and small panels before sacrificing the scene. Only the main large title may use subtle stroke, shadow, highlight edge, or emboss-like effects when needed; body text, notes, subtitles, tags, lower-thirds, overlays, chips, labels, and remarks must not use white emboss, white highlight shadow, glow, stroke, or similar decorative readability effects.
 - When a text background, panel, chip, lower-third, or overlay fill is needed, choose an opacity within 20%-50% according to the actual frame. Text must be readable, but the image should remain visible enough to preserve the business scene.
 
 ## 6. Use Deterministic Typography, Not AI Text
@@ -67,8 +67,10 @@ The purpose of generating people, facial expressions, hands, project objects, an
 Final Chinese text on covers and video stills must be added locally with real font files. Do not depend on image-generation model lettering.
 
 - Use the workspace font system: Alimama ShuHeiTi for large titles, Alibaba PuHuiTi for body and labels unless the project specifies otherwise.
+- For Xiaohongshu/Douyin 9:16 covers, video first frames, and vertical visual tests, use the default visual format from `cover-formulas.md` unless the user specifies another visual system: `1080 x 1920`, main title `120 pt`, body/supporting text `60 pt`, note/remark text `35 pt`, and measured rounded rectangles with `30% white` fill when text needs a background.
 - Check visible glyphs, punctuation, line breaks, and alignment.
 - Text inside a panel, chip, bubble, or label must be vertically centered by visible glyph bounds, not by a guessed baseline offset.
+- Visible artifacts must be audience-facing. Do not include internal workflow labels, asset names, approval/review wording, or production notes on covers or video frames.
 
 ## 7. Video Must Be Multi-Scene, Not One Picture With Motion
 
@@ -118,9 +120,12 @@ Before final delivery, perform QA against the deliverable type in `deliverables.
 For covers, inspect:
 
 - Final canvas ratio and platform fit.
+- Default visual format values when applicable: `1080 x 1920`, title `120 pt`, body/supporting text `60 pt`, note/remark text `35 pt`, and text backgrounds as `30% white` rounded rectangles.
 - Approved title preserved.
 - Text safe area and platform thumbnail behavior.
 - No text over faces, hands, key objects, project work, or core actions.
+- No internal workflow labels, asset names, approval/review wording, or production notes on the visible artifact.
+- No white emboss, white highlight shadow, glow, stroke, or similar decorative readability effects on body text, notes, subtitles, tags, lower-thirds, overlays, chips, labels, or remarks.
 - No broad mask causing unwanted two-tone image halves.
 - Text blocks, chips, and bubbles sized to actual text length.
 
@@ -135,7 +140,7 @@ For videos, inspect:
 - Case/evidence overlays remain readable when paused, are not falsely presented as verified proof, sit inside left/right safe margins, and do not cover the scene evidence they are meant to support.
 - Text background opacity sits within the 20%-50% range unless the scene is intentionally a flat logic card.
 - Panel height and width adapt to actual line count and text length.
-- No punctuation or one-character orphan lines in visible Chinese text.
+- No punctuation-at-line-start or orphan final lines where a normal phrase/sentence leaves only one character or one character plus punctuation on the last line. Deliberate one-character labels or annotations are acceptable when they are designed as standalone elements.
 - Audio track exists, contains the required narration unless explicitly waived by the user, duration is reasonable, and volume is not silent.
 - On-screen copy remains B-end facing throughout.
 - Final editor's note is present with exactly 5 relevant hot tags when a full platform content package is requested.

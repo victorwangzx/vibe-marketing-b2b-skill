@@ -112,6 +112,7 @@ Default format:
 
 - 9:16, 1080 x 1920.
 - For covers, the core title/subtitle/key visual must sit within the middle 3:4 thumbnail-safe area defined in `cover-formulas.md`.
+- Apply the `Today Visual Format Defaults` in `cover-formulas.md` unless the user specifies another visual system: title `120 pt`, body/supporting text `60 pt`, note/remark text `35 pt`, and text backgrounds as measured rounded rectangles with `30% white` fill.
 - Use a real or realistic education/business scene first, then deterministic local typography.
 
 Must include:
@@ -124,15 +125,18 @@ Must include:
 Hard requirements:
 
 - Do not rely on AI-generated Chinese text as final text.
+- Do not put internal workflow labels, approval/review wording, or agent-to-user production notes on the visible cover.
 - Do not cover faces, hands, project work, parent expressions, teacher actions, or the visual contrast that explains the scene.
 - Do not use large full-width masks or bottom panels merely to make text readable.
+- Only the main large title may use subtle stroke, shadow, highlight edge, or emboss-like effects when needed. Body text, notes, tags, chips, labels, and supporting phrases must not use white emboss, white highlight shadow, glow, stroke, or similar effects.
 - Text chips, bubbles, and panels must be sized from actual text length and aligned visually.
 
 QA:
 
 - Inspect full 9:16 image.
 - If the artifact is a Xiaohongshu cover, verify the middle 3:4 safe area or use the safe-area coordinates.
-- Check punctuation, line breaks, no single-character orphan lines, and no generated-text remnants.
+- Verify the default typography/background values when applicable: title `120 pt`, body `60 pt`, note `35 pt`, `30% white` rounded text backgrounds, and Apple-like corner radius.
+- Check punctuation, line breaks, no orphan final lines where a phrase/sentence leaves only one character or one character plus punctuation on the last line, and no generated-text remnants. Deliberate one-character labels are acceptable.
 
 ## Deliverable 5: Toutiao Cover
 
@@ -164,7 +168,7 @@ QA:
 
 - Inspect the final 4:3 canvas, not a cropped preview.
 - Confirm the approved title is preserved.
-- Check text readability, line breaks, punctuation, and no single-character orphan lines.
+- Check text readability, line breaks, punctuation, and no orphan final lines where a phrase/sentence leaves only one character or one character plus punctuation on the last line. Deliberate one-character labels are acceptable.
 - Confirm no generated-text remnants remain in the background.
 - Confirm text and panels do not cover core people, hands, project objects, business signage, or outcome evidence.
 
@@ -240,6 +244,7 @@ Hard requirements:
 - Do not deliver a promotional/service-introduction video with only music and subtitles unless the user explicitly approved that format. Voiceover is the primary carrier of the business argument; on-screen text supports it rather than replacing it.
 - If voiceover terminology is unresolved, do not omit narration as a workaround. Confirm the term handling first, or use confirmed workspace mappings and plain Chinese wording that avoids the unresolved term in the spoken script.
 - The approved cover should be integrated as the first frame of the video unless the user explicitly requests a different opening.
+- For the first-frame cover and major vertical visual states, apply the `Today Visual Format Defaults` in `cover-formulas.md` unless another visual system is specified.
 - Design the first 3 seconds deliberately as an opening hook that combines picture, voice, and on-screen copy. It should show a clear change, question, contrast, or business signal before the viewer swipes away.
 - Use multiple scenes or dynamic logic states: diagnosis, comparison, path map, checklist, timeline, flow, or project evidence.
 - Each scene should have its own planned visual treatment or key visual. Do not rely on the cover/background image plus changing subtitles as the main video design.

@@ -23,6 +23,7 @@ Every B2B video design draft should include these sections:
 - Title: use the approved video/topic title when one exists.
 - Basic setup: target buyer, institution type, platform ratio, planned duration, tone, core point, visual center, and related cover/source files.
 - First-frame cover: the video opening frame should also serve as the platform cover unless the user explicitly requests a separate cover.
+- Visual format defaults: unless another visual system is specified, the first-frame cover and major vertical visual states should follow `cover-formulas.md` `Today Visual Format Defaults`: `1080 x 1920`, title `120 pt`, body/supporting text `60 pt`, note/remark text `35 pt`, and measured rounded text backgrounds with `30% white` fill.
 - B2B diagnosis: real operating pain, qualified audience, unsuitable leads, and why the timing is appropriate.
 - First-3-second hook: voiceover opening, on-screen text, visual motion, and why it should stop the intended B-end buyer.
 - Film-style scene structure: scene-by-scene plan with narrative function, time range, shot size, camera/viewpoint, picture, screen text, production-ready voiceover, rhythm/motion, and transition notes.
@@ -133,6 +134,9 @@ Bottom placement requirements:
 - Keep on-screen text sparse. Avoid dense text over realistic scene images; use logic cards, labels, or staged reveals instead.
 - Panels and text backgrounds must be sized from actual text length and line count during production.
 - Text-background opacity must be selected from 20%-50% according to the actual frame, balancing readability with preservation of the background image.
+- For default Xiaohongshu/Douyin cover or first-frame text, use `30% white` rounded rectangles unless the actual frame requires another opacity within the allowed range.
+- Only the main large title may use subtle stroke, shadow, highlight edge, or emboss-like effects. Body text, notes, subtitles, tags, lower-thirds, overlays, chips, labels, and remarks must not use white emboss, white highlight shadow, glow, stroke, or similar decorative readability effects.
+- Do not put internal workflow labels, approval/review wording, asset names, or production notes on visible video frames.
 - If an approved cover exists, reference the current approved file. Do not reuse obsolete covers.
 - The first video frame should match the approved cover title, visual hierarchy, and core business signal. If a separate cover image is exported, it must be derived from the first frame unless the user asks for a variant.
 
@@ -222,7 +226,10 @@ Remotion动效/节奏/转场：
 
 ## 字幕与排版
 
-- 
+- 默认竖版视觉规范：1080 x 1920；大标题 120 pt；正文/辅助文字 60 pt；备注 35 pt；文字底色默认 30% 白色圆角矩形
+- 圆角：苹果式软圆角，1080 x 1920 画布上可从 24-36 px 起调
+- 文字效果：仅主大标题必要时可用轻微描边/投影/高光边；正文、备注、字幕、标签、lower-third、overlay、chip、label 禁止白色浮雕、高光投影、发光、描边
+- 可见画面：不得出现“选题/交付/素材/脚本/设计稿/版本”等内部流程标签
 
 ## 音乐与声音
 
