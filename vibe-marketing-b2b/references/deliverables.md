@@ -21,13 +21,13 @@ Default sequence for a full platform content item:
 2. Diagnose target institution, buyer, real pain, fit timing, and unsuitable leads.
 3. Choose the content type and core point of view.
 4. Draft the publishable copy package: title, editor's note or Toutiao article body, lead-quality filter, and platform-appropriate tags when needed.
-5. Design the Xiaohongshu/Douyin cover as the video's first frame, and design a dedicated Toutiao 4:3 cover when a Toutiao article is included.
+5. Design and export both required covers: the Xiaohongshu/Douyin 9:16 poster cover as the video's first-frame hook, and a separately composed 4:3 Toutiao-style landscape banner cover. The second cover is required even when no Toutiao article is included.
 6. Create the editable short-video design draft.
 7. Wait for the user's draft confirmation unless explicitly told to proceed.
 8. Check production dependencies and commercial-use assumptions when rendering is requested.
 9. Confirm voiceover terms when narration contains mixed Chinese-English terms or technical terms.
 10. Produce the rendered video.
-11. QA the video, first-frame cover, editor's note, tags, and final files.
+11. QA the video, the 9:16 first-frame poster cover, the independent 4:3 landscape banner cover, editor's note, tags, and final files.
 
 If the user has already provided a specific target institution, buyer, title, pain point, platform, product, hook, visual direction, or delivery format, skip the corresponding discovery step. Do not ask the user to repeat information that is already clear. Instead:
 
@@ -41,16 +41,17 @@ If the user has already provided a specific target institution, buyer, title, pa
 For a full Xiaohongshu/Douyin-style B2B content item, the final deliverables are:
 
 - Rendered short video.
-- Cover integrated as the video's first frame, not a separate unrelated cover concept.
+- A 9:16 poster-cover file integrated as the video's first-frame hook, not a separate unrelated cover concept.
+- A separately composed 4:3 Toutiao-style landscape banner-cover file. It is required for every complete content package, not only when a Toutiao article is requested.
+- Publishable post title. For Xiaohongshu, it must pass the title limit and counting rule in `xiaohongshu-taboo.md`.
 - Editor's note/body copy.
 - Exactly 5 related hot tags.
 
-The video first frame should carry the approved cover title and visual signal. If a separate image file is also exported for upload convenience, it must match the first frame's title, hierarchy, and core visual unless the user explicitly requests a platform-specific variant.
+The video first frame should carry the approved 9:16 cover title and visual signal. The exported 9:16 cover must match that first frame's title, hierarchy, and core visual unless the user explicitly requests a platform-specific variant. The required 4:3 cover may reflow the same approved title for its format, but must preserve its semantic promise, business signal, and visual direction.
 
 When a Toutiao/头条号 article is part of the package, also deliver:
 
 - Toutiao account article.
-- Dedicated Toutiao 4:3 cover.
 - Exactly 5 related Toutiao tags.
 
 ## Deliverable 1: Opportunity Positioning
@@ -75,6 +76,8 @@ Quality bar:
 
 Use when the user asks for batch planning, account direction, or multiple topics.
 
+Quantify the plan as a concrete number of posts or articles. Count by topic by default: one topic is one piece even when it may later become a video, script, or written post. When one topic genuinely needs two distinct angles or publishable drafts, state that decision and count it as two pieces.
+
 Must include:
 
 - Content pillars: industry judgment, institution pain, solution disassembly, scenario proof, cooperation invitation.
@@ -92,7 +95,7 @@ Use when the user asks for one content item such as "给某类机构做一条科
 
 Must include:
 
-- Title or cover headline.
+- Publishable post title and cover headline. They may use the same approved wording, but the post title must still be delivered explicitly rather than implied by the cover.
 - Cover/first-frame design: platform ratio, title hierarchy, visual subject, text-safe area, and what must not be covered.
 - Editor's note/body copy: usually 100-200 Chinese characters when requested for Xiaohongshu; concise, credible, and self-screening.
 - Exactly 5 related hot tags for the target platform and topic.
@@ -138,6 +141,15 @@ QA:
 - Verify the default typography/background values when applicable: title `120 pt`, body `60 pt`, note `35 pt`, `30% white` rounded text backgrounds, and Apple-like corner radius.
 - Check punctuation, line breaks, no orphan final lines where a phrase/sentence leaves only one character or one character plus punctuation on the last line, and no generated-text remnants. Deliberate one-character labels are acceptable.
 
+## Dual-Cover Delivery Contract
+
+Every complete video-content package exports these two independent files:
+
+- `封面_9x16_海报_vX.Y.png`: 1080×1920 vertical poster cover. It carries the video first-frame hook and follows Deliverable 4 plus `cover-formulas.md`.
+- `封面_4x3_头条横幅_vX.Y.png`: 4:3 landscape banner cover. It follows Deliverable 5 and the same typography, text-panel, subject-protection, Chinese line-break, and full-size visual-QA rules.
+
+The two covers must express the same approved promise, audience, evidence, and visual direction, while each is composed natively for its own canvas. Do not crop, stretch, letterbox, or merely resize either cover to produce the other. Do not treat the 4:3 banner as a lower-priority derivative: it receives the same local deterministic typography, measured text backing, safe-area check, and visual inspection as the 9:16 poster.
+
 ## Deliverable 5: Toutiao Cover
 
 Default format:
@@ -145,6 +157,7 @@ Default format:
 - Dedicated 4:3 landscape cover.
 - Do not crop a Xiaohongshu cover into Toutiao format.
 - Build a separate composition for Toutiao even when the title and visual theme come from an approved Xiaohongshu/Douyin item.
+- This cover is part of every complete video-content delivery. A Toutiao article is optional; the 4:3 banner cover is not.
 
 Must include:
 

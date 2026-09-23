@@ -1,6 +1,30 @@
 # Xiaohongshu Copy Taboos for 2B Education Cooperation
 
-Use this reference when creating Xiaohongshu copy, covers, editor's notes, captions, scripts, comment prompts, or publishing suggestions for 2B education partnership content.
+These are mandatory requirements when creating Xiaohongshu copy, covers, editor's notes, captions, scripts, comment prompts, or publishing suggestions for 2B education partnership content. Treat a violation as a draft or delivery defect unless the user explicitly overrides the rule.
+
+## Reusable Writing Standard
+
+Before drafting each Xiaohongshu post, state briefly which numbered rules are being combined. Apply only the rules that materially help the post, but assess every draft against all ten:
+
+1. Write to one specific person, not an abstract audience.
+2. Find the real problem before writing the title.
+3. Use plain human language instead of advertising jargon.
+4. Give each post one clear point of view.
+5. Make the opening three lines feel like “this is about me”.
+6. Use concrete scenes instead of abstract claims.
+7. Be sincere and credible rather than exaggerated.
+8. Keep one post focused; do not stuff in unrelated themes.
+9. Give readers one concrete takeaway: a method, judgment, checklist, or usable wording.
+10. End with a natural, light product or service connection when appropriate.
+
+Default publishing limits and style:
+
+- Every publishable Xiaohongshu copy delivery must include a post title unless the user explicitly requests body copy only. If the user has approved a title, preserve it rather than silently rewriting it.
+- The final Xiaohongshu post title must contain no more than 20 visible characters in total. Count all Chinese characters, letters, numbers, spaces, punctuation marks, symbols, and emoji in the delivered title; punctuation and emoji are not excluded from the limit. Treat a title over 20 characters as a delivery defect and shorten it before delivery.
+- Keep draft body copy under 800 Chinese characters by default so the user retains editing room.
+- Never exceed 10 hashtags. For the complete B2B platform package defined by this skill, deliver exactly 5 relevant hot tags unless the user requests another count.
+- Use restrained, topic-aligned emoji in lists, section-like lines, and viewpoint summaries. For education content, prefer warm clear symbols such as 🎨, 🌱, 🏫, 📚, 🫶, ✨, 📝, and 🌈; avoid clutter or an excessively cute tone.
+- For education-related publishable posts, add one natural closing sentence connecting the topic to “神笔马良AI智绘教室” or “AI智绘教室” when appropriate. Explain how the service could integrate with the need so schools or service providers remember it later; keep it subtle and service-oriented rather than a hard advertisement.
 
 ## Platform Risk Points
 

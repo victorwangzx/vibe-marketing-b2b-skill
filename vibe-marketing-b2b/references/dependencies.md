@@ -65,6 +65,21 @@ Before rendering a video, confirm:
 - The TTS voice/model is available locally or approved for the intended commercial use.
 - No new plugin, dependency, model, browser component, paid API, or third-party package is installed without user approval.
 
+## Current Workspace Runtime
+
+Use these stable shared paths in the user's current Codex workspace. Do not copy reusable TTS, timing, browser, or encoding utilities into individual task folders.
+
+- Reusable video helpers: `/Users/admin/Documents/Codex/tools/video-generation/`
+- Offline-first segmented Kokoro wrapper: `/Users/admin/Documents/Codex/tools/video-generation/kokoro_segments_offline.sh`
+- Fixed Kokoro model cache: `/Users/admin/Documents/Codex/tools/video-generation/models/kokoro-82m-current`
+- Video environment setup, only when the approved environment is missing: `/Users/admin/Documents/Codex/tools/video-generation/setup_video_env.sh`
+- Shared Remotion CLI: `/Users/admin/Documents/Codex/tools/remotion/bin/remotion`
+- Remotion environment file: `/Users/admin/Documents/Codex/tools/remotion/env.sh`
+- Shared Headless Shell: `/Users/admin/Documents/Codex/tools/chrome-headless-shell/mac-152.0.7928.2/chrome-headless-shell-mac-x64/chrome-headless-shell`
+- Full ffmpeg with H.264/libx264 support: `/Users/admin/Documents/Codex/tools/ffmpeg/ffmpeg`
+
+For B2B vibe-marketing short videos, use Remotion by default unless the user explicitly requests HyperFrames or another renderer. Prefer local Kokoro narration over HeyGen for ordinary generated videos. For news, policy, education-hotspot, and formal explainers, prefer Kokoro voice `zm_yunyang`; use continuous paragraph input when practical to avoid excessive sentence gaps. TTSMaker may use voice `1508 - Fei 阿飞-热门通用/播音男声` when that provider is requested. These defaults do not apply to the H3 production path: `vibe-marketing-b2b-h3` uses H3-generated final narration and retains the verified H3 audio track.
+
 ## Suggested Folder Roles
 
 - `outputs/<task-folder>/video_design/`: editable Markdown video design drafts.

@@ -1,6 +1,6 @@
 # Production and QA Rules from Prior B2B Content Builds
 
-Use these rules when creating or revising 2B education cooperation covers, short videos, Toutiao covers, Xiaohongshu notes, or platform-specific derivatives. These rules come from real production failures and should prevent repeating them.
+These are hard production and QA requirements for 2B education cooperation covers, short videos, Toutiao covers, Xiaohongshu notes, image sets, and platform derivatives. They come from demonstrated production failures. A failed applicable check blocks final delivery unless the user explicitly overrides it.
 
 ## 1. Preserve Approved Strategy
 
@@ -69,8 +69,20 @@ Final Chinese text on covers and video stills must be added locally with real fo
 - Use the workspace font system: Alimama ShuHeiTi for large titles, Alibaba PuHuiTi for body and labels unless the project specifies otherwise.
 - For Xiaohongshu/Douyin 9:16 covers, video first frames, and vertical visual tests, use the default visual format from `cover-formulas.md` unless the user specifies another visual system: `1080 x 1920`, main title `120 pt`, body/supporting text `60 pt`, note/remark text `35 pt`, and measured rounded rectangles with `30% white` fill when text needs a background.
 - Check visible glyphs, punctuation, line breaks, and alignment.
+- When exact Chinese title shapes matter, locate and bind the concrete OTF/TTF file rather than trusting the family name. For raster exports, a key title may be rendered to SVG outlines with `hb-view` before compositing so silent font substitution cannot change the final glyphs.
 - Text inside a panel, chip, bubble, or label must be vertically centered by visible glyph bounds, not by a guessed baseline offset.
 - Visible artifacts must be audience-facing. Do not include internal workflow labels, asset names, approval/review wording, or production notes on covers or video frames.
+
+## 6A. Generate Victor From Identity Reference, Not A Photo Filter
+
+When Victor appears in a cover, scene image, or video keyframe, a supplied real photograph is an identity source, not final artwork.
+
+- Use reference-guided image generation to synthesize a new Victor character image. Do not merely apply a Photoshop-like illustration, cartoon, painterly, or comic filter to the original photo; do not retain the original photograph's pixels, background, crop, pose, clothing, or lighting by default.
+- Style priority is the current project's approved scene-character style. Match its realism level, facial rendering, linework, proportions, palette, texture, and lighting so Victor belongs to the same visual world as the other people. If the project has no established character style, default to a polished realistic-comic treatment rather than a visibly filtered photograph.
+- Preserve Victor's recognizable identity cues from the real reference, including facial structure, glasses when present, hairstyle, approximate age, and other stable features. Recreate clothing, pose, expression, viewpoint, and lighting for the actual scene.
+- If no approved styled Victor reference exists for the project, generate a clean Victor character master first and visually approve it before producing all Victor scenes. Reuse that approved generated master as the identity/style reference across subsequent scene generation.
+- Generate Victor inside each complete scene with coherent perspective, scale, light, texture, and interaction. Do not paste a detached portrait or cutout over an unrelated background unless the user explicitly requests a collage treatment.
+- QA must compare the generated Victor with both the source identity reference and the surrounding scene characters. Reject outputs that lose Victor's identity, preserve an obvious photographic/filter residue, or make him look like a different rendering style pasted into the scene.
 
 ## 7. Video Must Be Multi-Scene, Not One Picture With Motion
 
@@ -90,9 +102,12 @@ Minimum expectation:
 - On-screen headings that advance the logic: hook, pain, boundary, product logic, timing, trial path.
 - Concrete examples that are too long for voiceover may appear as pause-readable case/evidence overlays, but they must be planned in the video design draft rather than added casually during rendering. Treat these overlays as supplemental bottom information strips by default, similar to print footnotes or editorial lower-thirds; only use side notes or separate logic cards when the bottom would cover key visual evidence or conflict with subtitles.
 - Scene durations should come from segment-level voiceover timing when narration is used, not only total audio duration.
+- Default new-media delivery to vertical-first composition: use `9:16` (`1080 x 1920`) for Douyin, WeChat Channels, Xiaohongshu, Kuaishou, Reels, and Shorts; use `3:4` only for a deliberately denser poster-like treatment. Use horizontal `16:9` only when the requested destination is meeting playback, courseware, Bilibili, or another widescreen context.
+- Do not hold one still image or unchanged scene state longer than about 6-8 seconds unless it contains multiple visible foreground-animation beats, crop changes, object movement, or staged information reveals. Background zoom alone does not satisfy this requirement.
 - If using local Kokoro voiceover, check sentence segmentation and gaps. Avoid unnatural long pauses from line-by-line synthesis.
 - If a brand name contains an English acronym such as "AI", keep the visual brand name unchanged and make the voiceover use standard English-letter pronunciation. Prefer a tested pronunciation form such as "A-I" when the TTS model otherwise weakens or misreads the abbreviation. Do not use Chinese-character approximations such as "诶、爱", and do not replace brand-name "AI" with "人工智能".
 - Before generating voiceover, scan the script for mixed Chinese-English terms, acronyms, brand English, and technical labels. The video design draft should already contain the production-ready, localized voiceover wording plus a confirmation checklist: keep visually, translate in voiceover, or use voiceover-only wording. For Kokoro, prefer confirmed pure-Chinese wording instead of forcing English acronym pronunciation. Current confirmed mappings: "STEM" -> "科创融合课程", "PBL" -> "项目化学习", "GPT" -> "生成式人工智能工具", semantic "AI" -> "人工智能".
+- Before any Chinese synthesis, identify potentially polyphonic terms from sentence meaning. Preserve the visible wording, register any necessary pronunciation override in the TTS lexicon, inspect the resulting phonemes when the tool supports it, and reject audio with a known wrong reading rather than changing the publishable term merely to avoid the pronunciation problem.
 - Unresolved voiceover terminology is a blocker to voiceover production, not permission to omit narration. Confirm the terms or use approved plain-Chinese wording before rendering.
 
 ## 8. Video Copy QA Comes Before Rendering
@@ -160,3 +175,23 @@ When fixing a concrete production defect, create a new semantic version rather t
 - Include a short Chinese descriptor in the filename that identifies the fix, such as `修复底色溢出版`, `原定标题版`, or `无灰遮罩版`.
 
 When the user points out a defect, inspect the affected artifact before editing. Do not assume the issue is only in copy or only in design.
+
+If the user says a vibe-marketing or education-service video is not genuinely scene-based, first summarize the concrete delivery failure and update the relevant reusable production rule before rebuilding. The next version must use recognizable scene imagery or supplied footage plus deterministic local text and must explicitly test whether every scene can be understood without subtitles.
+
+## 11. Structured Posters And Image Sets
+
+For educational infographics, lifecycle diagrams, process posters, food/category posters, and other image-plus-label deliverables, lock the information architecture before generating imagery: exact categories, branch logic, illustration slots, and final local labels. The generation prompt must describe those planned visual slots and matching objects. Do not generate a decorative image first and infer labels afterward.
+
+- Do not ask the image model to create blank label boxes, plaques, ribbons, caption frames, or text-border areas. Reserve negative space and add the actual typography locally.
+- Verify that every local label matches the object or example beside it. A branch labelled “蒸制｜馒头｜包子” must not show unrelated dumplings, fried items, or decorative placeholders.
+- Generate the complete no-text scene or illustration first, then add all final Chinese typography locally with concrete font files. AI-generated lettering is never final typography.
+- Keep the generated background complete and preserve its aspect ratio. Do not stretch, blur-edge, letterbox, or arbitrarily crop it unless the user approves that treatment.
+- Size chips, labels, pills, and panels from measured text bounds and line count. Vertically align by visible glyph bounds, not a guessed baseline offset.
+- Proofread all visible punctuation and enforce Chinese line breaking. Closing punctuation, closing quotation marks/brackets, commas, enumeration marks, question marks, exclamation marks, and full stops must not begin a line; opening marks must not end a line.
+- Avoid accidental orphan final lines containing only one character or one character plus punctuation. Deliberate single-character titles or labels are allowed.
+- When the user reports a problem by card number or visible label, map it to the actual filename and inspect that file before editing.
+- For numbered sets, name the cover `00` by default and align later filenames with their visible sequence numbers. Do not name both the cover and first content card `01`.
+
+For Xiaohongshu image sets, keep the cover and all cards at the same final size. Default to `1080 x 1920`; place core title, subtitle, and key visual inside the middle 3:4 thumbnail-safe area defined in `cover-formulas.md`, then inspect both the full frame and that crop. Do not export a separate 3:4 cover unless requested.
+
+For Toutiao articles, create a dedicated 4:3 landscape cover with a recognizable scene and one dominant title. Do not reuse or center-crop the Xiaohongshu cover, and avoid dense secondary checklists or explanatory panels.

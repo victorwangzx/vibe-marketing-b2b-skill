@@ -90,31 +90,32 @@ For any post or short-video idea, make the implied funnel clear:
 
 ## Deliverables
 
-For environment setup, production dependencies, commercial-use checks, and the reason Chinese voiceover should localize mixed English terms before synthesis, read [references/dependencies.md](references/dependencies.md).
+For full media production, environment setup, production dependencies, commercial-use checks, and Chinese voiceover handling, **must read and follow** [references/dependencies.md](references/dependencies.md) before synthesis or rendering. Copy-only tasks do not need this reference.
 
-Read [references/deliverables.md](references/deliverables.md) before producing or revising any concrete artifact. It defines what this skill can deliver and the minimum requirements for each deliverable type.
+Before producing or revising any concrete artifact, **must read and follow** [references/deliverables.md](references/deliverables.md). Its minimum requirements are delivery gates, not optional suggestions.
 
 Common deliverables include:
 
 - B2B opportunity positioning and audience-fit diagnosis.
 - Content matrix for a specific institution type.
-- Complete single-post package: video, cover as the video's first frame, editor's note/body copy, 5 related hot tags, and lead-quality filter.
+- Complete single-post package: video, two independently composed covers (a 9:16 poster cover and a 4:3 Toutiao-style landscape banner cover), publishable post title, editor's note/body copy, 5 related hot tags, and lead-quality filter.
 - Xiaohongshu cover or image-set direction.
-- Toutiao 4:3 article cover: a dedicated landscape cover with one large title, a clear business scene, and no reuse/cropping of the Xiaohongshu cover.
 - Toutiao/头条号简明文章: use plain owner-facing language to explain one B2B opportunity, with life analogies for obscure terms when needed, plus 5 related tags.
 - Douyin/Xiaohongshu vertical short-video design draft, plan, or rendered-video specification.
 - Cross-platform adaptation while preserving approved titles and strategy.
 - QA checklist for visual, copy, platform, and lead-quality risks.
 
-For short-video production, read [references/video-design-draft.md](references/video-design-draft.md) before rendering. By default, produce an editable Markdown video design draft first so the user can revise details directly in the file; render only after the draft is approved or the user explicitly asks to skip the draft.
+For short-video production, **must read and follow** [references/video-design-draft.md](references/video-design-draft.md) before asset generation, synthesis, or rendering. By default, produce an editable Markdown video design draft first so the user can revise details directly in the file; render only after the draft is approved or the user explicitly asks to skip the draft.
 
-Default final package for a Xiaohongshu/Douyin platform content item is: rendered video, cover integrated as the video's first frame, editor's note, and exactly 5 relevant hot tags. When a Toutiao article is included, also provide a dedicated Toutiao 4:3 cover and exactly 5 related Toutiao tags. If the user asks only for planning or drafting, stop at the requested pre-production deliverable.
+Default final package for every complete Xiaohongshu/Douyin B2B content item is: rendered video; a 9:16 poster cover integrated with the video's first-frame hook; a separately composed 4:3 Toutiao-style landscape banner cover; publishable post title; editor's note; and exactly 5 relevant hot tags. Both cover files are mandatory even if no Toutiao article is requested. They must use the same approved strategy and cover-detail rules, but must never be created by cropping or stretching one another. For Xiaohongshu, the final title must contain no more than 20 visible characters in total, counting punctuation and emoji, as defined in `references/xiaohongshu-taboo.md`. When a Toutiao article is included, also provide the article and exactly 5 related Toutiao tags. If the user asks only for planning or drafting, stop at the requested pre-production deliverable.
 
 ## Cover Formulas
 
-For Xiaohongshu or Douyin covers, use concrete B2B signals. Prefer real or realistic business scenes over abstract graphics. Read [references/cover-formulas.md](references/cover-formulas.md) when the user asks for cover batches, visual directions, or template systems.
+For Xiaohongshu or Douyin covers, use concrete B2B signals. Prefer real or realistic business scenes over abstract graphics. For cover batches, visual directions, or template systems, **must read and follow** [references/cover-formulas.md](references/cover-formulas.md).
 
-When producing platform covers, videos, or revising an existing content case, also read [references/production-qa-rules.md](references/production-qa-rules.md). These rules preserve approved titles, prevent platform-format drift, and define the minimum visual QA expected before delivery.
+When producing platform covers, videos, image sets, or revising an existing content case, **must read and follow** [references/production-qa-rules.md](references/production-qa-rules.md). These are hard production and delivery requirements; a failed check blocks final delivery.
+
+When Victor appears in generated artwork or video, treat any supplied real photograph as an identity reference only. Use reference-guided image generation to create a new Victor character depiction that matches the approved scene-character style; do not use a filter-like transformation of the source photo as the final character artwork. The detailed identity and style-consistency gate is mandatory in `references/production-qa-rules.md`.
 
 Default strongest formulas:
 
@@ -128,11 +129,11 @@ Default strongest formulas:
 
 Use plain, credible business language. Avoid hype, empty slogans, and unverifiable promises. The vibe should be professional, result-oriented, practical, and upgrade-minded.
 
-For Chinese platform copy, follow the workspace Xiaohongshu preferences where relevant: specific reader, concrete scene, one clear point of view, restrained emoji, under 10 hashtags, and a subtle connection to "神笔马良AI智绘教室" or "AI智绘教室" when education-related and appropriate.
+For Xiaohongshu copy, apply the mandatory writing and publishing requirements in `references/xiaohongshu-taboo.md`; do not rely on separate workspace-level Xiaohongshu rules.
 
 ## Xiaohongshu Compliance
 
-When producing Xiaohongshu notes, cover copy, captions, editor's notes, comment prompts, or short-video scripts, read [references/xiaohongshu-taboo.md](references/xiaohongshu-taboo.md). Prioritize qualified leads, native platform style, and compliant soft conversion over direct traffic capture.
+When producing Xiaohongshu notes, cover copy, captions, editor's notes, comment prompts, or short-video scripts, **must read and follow** [references/xiaohongshu-taboo.md](references/xiaohongshu-taboo.md). Its writing standard, limits, education-brand closing rule, and compliance boundaries are mandatory unless the user explicitly overrides them.
 
 ## Delivery Discipline
 
@@ -144,9 +145,11 @@ For rendered B2B promotional, sales, product-introduction, service-introduction,
 
 Do not treat unresolved terminology as permission to omit narration. If terms need confirmation, pause before synthesis and ask for term handling, or choose already-confirmed Chinese wording when the workspace/user rules provide it. The final promotional video should not be downgraded to moving slides with music unless the user explicitly approves that format.
 
-Before generating Chinese voiceover, scan the script for mixed Chinese-English terms, acronyms, brand English, product names, and technical terms. Present a pronunciation/translation checklist for user confirmation first, stating which terms will remain as-is on screen, which terms will be translated in voiceover, and which voiceover-only wording will be used.
+Before generating Chinese voiceover, **must read and follow** [references/voiceover-lexicon.md](references/voiceover-lexicon.md). Preserve the approved audience-facing copy, but create a separate conversational voiceover line before synthesis. Scan it for mixed Chinese-English terms, acronyms, brand English, product names, technical terms, numbers, dates, and polyphonic Chinese. Present a pronunciation/translation checklist for user confirmation when any unresolved choice materially changes what the audience hears.
 
-For Kokoro voiceover, prefer confirmed pure-Chinese wording instead of forcing English acronym pronunciation. Current confirmed mappings:
+For every video, this is a **video-design gate**, not a late TTS cleanup step: complete the conversational `voiceover_text` and a resolved pronunciation ledger before approving scene structure, estimating narration duration, selecting shot count, designing image assets, or rendering. The design draft must identify each polyphonic Chinese word by intended meaning/pronunciation and each English/acronym item by one chosen treatment: confirmed Chinese semantic replacement, tested standard English, or tested letter-by-letter reading. An unresolved item blocks timing and production; do not build shots around raw display copy and “fix the pronunciation later.”
+
+For Kokoro voiceover, prefer confirmed pure-Chinese wording instead of forcing English acronym pronunciation. The canonical mappings and their context boundaries live in `references/voiceover-lexicon.md`; do not maintain a second independent glossary here. Common examples include:
 
 - `STEM` -> `科创融合课程`
 - `PBL` -> `项目化学习`
