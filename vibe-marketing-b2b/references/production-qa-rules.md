@@ -2,6 +2,8 @@
 
 These are hard production and QA requirements for 2B education cooperation covers, short videos, Toutiao covers, Xiaohongshu notes, image sets, and platform derivatives. They come from demonstrated production failures. A failed applicable check blocks final delivery unless the user explicitly overrides it.
 
+For every Remotion video, the production contract gate in `remotion-production-contract.md` is mandatory. Its locked typography, browser line-box inspection, punctuation timing, media checksums, visible-speaker approval, and post-render media audit convert the applicable rules below into render-blocking checks. A visual spot check does not replace the automated gate, and the gate does not replace normal-speed human review.
+
 ## 1. Preserve Approved Strategy
 
 When the user has already approved a title, pain point, audience, or hook, do not rewrite it during platform adaptation unless the user explicitly asks for a new strategy.

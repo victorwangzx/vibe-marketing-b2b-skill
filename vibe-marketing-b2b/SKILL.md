@@ -1,9 +1,14 @@
 ---
 name: vibe-marketing-b2b
 description: Create 2B vibe marketing strategy, content matrices, Xiaohongshu/Douyin cover concepts, Toutiao/头条号 articles and covers, and sales funnel copy for business partnerships, especially education/training机构合作获客.
+metadata:
+  short-description: B2B vibe marketing production
+  version: 2.0.0
 ---
 
 # Vibe Marketing B2B
+
+Current workflow version: **v2.0.0**. See [references/revision-history.md](references/revision-history.md) for the maintained change record.
 
 Use this skill when the user asks to plan, package, or batch-produce content for 2B partnership acquisition using vibe marketing, especially for selling a new course/product line to existing institutions. This skill can produce strategy, content planning, covers, publishable copy, Toutiao/头条号 articles, editable short-video design drafts, short-video scripts, rendered video directions, and platform-specific derivatives.
 
@@ -106,6 +111,12 @@ Common deliverables include:
 - QA checklist for visual, copy, platform, and lead-quality risks.
 
 For short-video production, **must read and follow** [references/video-design-draft.md](references/video-design-draft.md) before asset generation, synthesis, or rendering. By default, produce an editable Markdown video design draft first so the user can revise details directly in the file; render only after the draft is approved or the user explicitly asks to skip the draft.
+
+For every final video assembled with Remotion, **must read and follow** [references/remotion-production-contract.md](references/remotion-production-contract.md), whether or not H3 is used. After the design draft is approved and before implementation, create and lock one machine-readable production contract. Remotion must read its canvas, typography, text, timing, media, and render settings from that contract; the final render command must run the shared preflight, and final delivery must pass the shared post-render audit. Direct `remotion render` without the gate is not an accepted delivery path.
+
+At the start of a rendered-video task, **must read and follow** [references/workspace-layout.md](references/workspace-layout.md). Run the bundled `scripts/init-workspace.mjs` unless the selected task folder already has the compatible structure. Keep task assets, Remotion source, design drafts, proof renders, final deliverables, and QA evidence in their designated directories; do not improvise a new layout per task.
+
+For narrated B2B videos, the contract default for `。？！` is a complete **0.40-second** sentence-ending pause with **±0.03-second** automated tolerance; `，、：；` retain natural in-sentence timing. A different cadence requires explicit approval before production and must be recorded in the contract. When a readable narrator mouth is present, matching audio samples and timeline offset are necessary but not sufficient: the proof clip also requires normal-speed human lip-sync review.
 
 Default final package for every complete Xiaohongshu/Douyin B2B content item is: rendered video; a 9:16 poster cover integrated with the video's first-frame hook; a separately composed 4:3 Toutiao-style landscape banner cover; publishable post title; editor's note; and exactly 5 relevant hot tags. Both cover files are mandatory even if no Toutiao article is requested. They must use the same approved strategy and cover-detail rules, but must never be created by cropping or stretching one another. For Xiaohongshu, the final title must contain no more than 20 visible characters in total, counting punctuation and emoji, as defined in `references/xiaohongshu-taboo.md`. When a Toutiao article is included, also provide the article and exactly 5 related Toutiao tags. If the user asks only for planning or drafting, stop at the requested pre-production deliverable.
 
