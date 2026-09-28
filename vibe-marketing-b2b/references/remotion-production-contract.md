@@ -18,6 +18,8 @@ Each Remotion project must contain:
 - A narration timing manifest and immutable narration WAV.
 - A visible-speaker review record for every readable narrator mouth.
 
+The production contract must also define `visualRules.textPanels`. The default baseline is `rgba(255,255,255,0.30)`, a `24-36 px` Apple-like corner radius, and at least `48 px` horizontal padding on a `1080 x 1920` canvas. List every audience-facing text-panel CSS selector in `visualRules.textPanels.selectors`; each listed selector must bind the shared contract variables for background, radius, and horizontal padding. Hard-coded near-opaque fills or missing radius/padding bindings fail preflight.
+
 Remotion source must import the contract and derive composition settings, text, timeline arrays, media paths, and CSS variables from it. Do not keep a second manually maintained set of caption arrays, font sizes, panel widths, or shot timings in TSX/CSS.
 
 ## Approval and locking
@@ -42,7 +44,7 @@ The project's final `render` script must begin with the shared preflight. Direct
 }
 ```
 
-The preflight must fail on contract drift, font drift, text overflow, excessive line count, orphan final lines, prohibited punctuation at line start, sentence-pause violations, narration or source checksum mismatch, Remotion camera transforms, timeline gaps, or unapproved visible-speaker clips.
+The preflight must fail on contract drift, font drift, text overflow, excessive line count, orphan final lines, prohibited punctuation at line start, text-panel opacity/radius/padding drift, missing panel-selector bindings, sentence-pause violations, narration or source checksum mismatch, Remotion camera transforms, timeline gaps, or unapproved visible-speaker clips.
 
 The post-render audit must verify the same locked contract plus canvas, fps, duration, video/audio/container start times, full decode, loudness, true peak, and isolated single-frame flashes.
 

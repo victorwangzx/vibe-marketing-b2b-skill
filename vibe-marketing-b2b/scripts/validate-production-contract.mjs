@@ -133,6 +133,67 @@ for (const [sourceFile, pattern, description] of bindingRequirements) {
   pattern.test(source) ? pass('contract-binding', `${sourceFile}: ${description}`) : fail('contract-binding', `${sourceFile}: missing binding: ${description}`);
 }
 
+const panelRules = contract.visualRules?.textPanels;
+if (!panelRules) {
+  fail('text-panel-contract', 'visualRules.textPanels is required');
+} else {
+  const alpha = Number(panelRules.backgroundAlpha);
+  const tolerance = Number(panelRules.backgroundAlphaTolerance ?? 0.01);
+  const radius = Number(panelRules.borderRadiusPx);
+  const paddingX = Number(panelRules.minPaddingXPx);
+  Math.abs(alpha - 0.3) <= tolerance
+    ? pass('text-panel-alpha', `background alpha ${alpha} within 0.30±${tolerance}`)
+    : fail('text-panel-alpha', `background alpha ${alpha} must be 0.30±${tolerance}`);
+  radius >= 24 && radius <= 36
+    ? pass('text-panel-radius', `${radius}px within the 24-36px baseline`)
+    : fail('text-panel-radius', `${radius}px must be within 24-36px`);
+  paddingX >= 48
+    ? pass('text-panel-padding', `${paddingX}px horizontal padding`)
+    : fail('text-panel-padding', `${paddingX}px must be at least 48px`);
+
+  const expectedBackground = `rgba(255,255,255,${alpha.toFixed(2)})`;
+  panelRules.background === expectedBackground
+    ? pass('text-panel-background-token', panelRules.background)
+    : fail('text-panel-background-token', `${panelRules.background} != ${expectedBackground}`);
+
+  const contractSource = readFileSync(filePath('src/contract.ts'), 'utf8');
+  const tokenBindings = [
+    ['--text-panel-bg', /'--text-panel-bg':\s*contract\.visualRules\.textPanels\.background/],
+    ['--text-panel-radius', /'--text-panel-radius':\s*`\$\{contract\.visualRules\.textPanels\.borderRadiusPx\}px`/],
+    ['--text-panel-padding-x', /'--text-panel-padding-x':\s*`\$\{contract\.visualRules\.textPanels\.minPaddingXPx\}px`/],
+  ];
+  for (const [token, pattern] of tokenBindings) {
+    pattern.test(contractSource)
+      ? pass('text-panel-token-binding', `src/contract.ts correctly binds ${token}`)
+      : fail('text-panel-token-binding', `src/contract.ts does not bind ${token} to its required contract value`);
+  }
+
+  const cssSource = readFileSync(filePath('src/style.css'), 'utf8');
+  const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const panelSelectors = panelRules.selectors ?? [];
+  if (!Array.isArray(panelSelectors) || panelSelectors.length === 0) {
+    fail('text-panel-selector', 'visualRules.textPanels.selectors must list every audience-facing text panel');
+  }
+  for (const selector of panelSelectors) {
+    const match = cssSource.match(new RegExp(`${escapeRegExp(selector)}\\s*\\{([^}]*)\\}`));
+    if (!match) {
+      fail('text-panel-selector', `${selector} has no CSS block`);
+      continue;
+    }
+    const block = match[1];
+    const requirements = [
+      ['background', /background\s*:\s*var\(--text-panel-bg\)/],
+      ['radius', /border-radius\s*:\s*var\(--text-panel-radius\)/],
+      ['horizontal padding', /padding\s*:[^;}]*var\(--text-panel-padding-x\)/],
+    ];
+    for (const [label, pattern] of requirements) {
+      pattern.test(block)
+        ? pass('text-panel-selector', `${selector} binds ${label}`)
+        : fail('text-panel-selector', `${selector} does not bind ${label}`);
+    }
+  }
+}
+
 const expectedLayoutWidths = {
   'cover-main': contract.layout.coverPanelWidthPx - 2 * contract.layout.coverPanelPaddingXPx,
   'cover-note': contract.layout.coverPanelWidthPx - 2 * contract.layout.coverPanelPaddingXPx,

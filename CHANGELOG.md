@@ -2,6 +2,24 @@
 
 All notable workflow changes are recorded here. Versions follow Semantic Versioning for the published skill package.
 
+## [2.1.0] - 2026-09-28
+
+### Added
+
+- Machine-readable text-panel tokens for the default `30% white` fill, `24-36 px` corner radius, and minimum `48 px` horizontal padding.
+- Render-blocking checks that every declared text-panel selector binds the shared background, radius, and padding variables.
+- Regression tests for near-opaque panels, missing corner radius, and insufficient horizontal padding.
+
+### Changed
+
+- New workspaces begin with compliant text-panel values instead of permissive legacy padding values.
+- Visual defaults in the production QA rules are now required contract bindings for Remotion delivery, not prose-only guidance.
+
+### Compatibility
+
+- Existing v2.0.0 projects can migrate by adding `visualRules.textPanels`, exporting the three shared CSS variables, and listing every audience-facing panel selector.
+- Strategy, copy, article, and design-draft-only tasks are unchanged.
+
 ## [2.0.0] - 2026-09-24
 
 ### Added

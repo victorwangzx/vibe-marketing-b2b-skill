@@ -3,12 +3,12 @@ name: vibe-marketing-b2b
 description: Create 2B vibe marketing strategy, content matrices, Xiaohongshu/Douyin cover concepts, Toutiao/头条号 articles and covers, and sales funnel copy for business partnerships, especially education/training机构合作获客.
 metadata:
   short-description: B2B vibe marketing production
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # Vibe Marketing B2B
 
-Current workflow version: **v2.0.0**. See [references/revision-history.md](references/revision-history.md) for the maintained change record.
+Current workflow version: **v2.1.0**. See [references/revision-history.md](references/revision-history.md) for the maintained change record.
 
 Use this skill when the user asks to plan, package, or batch-produce content for 2B partnership acquisition using vibe marketing, especially for selling a new course/product line to existing institutions. This skill can produce strategy, content planning, covers, publishable copy, Toutiao/头条号 articles, editable short-video design drafts, short-video scripts, rendered video directions, and platform-specific derivatives.
 

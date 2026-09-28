@@ -21,8 +21,10 @@ const writeJson = (path, value) => {
 
 const runCase = ({name, mutateContract, mutateTiming, expectedExit, expectedText}) => {
   const contract = structuredClone(baseContract);
-  contract.visibleSpeakers[0].humanReview.status = 'approved';
-  contract.visibleSpeakers[0].humanReview.reason = 'production-gate self-test only';
+  if (contract.visibleSpeakers[0]) {
+    contract.visibleSpeakers[0].humanReview.status = 'approved';
+    contract.visibleSpeakers[0].humanReview.reason = 'production-gate self-test only';
+  }
 
   if (mutateTiming) {
     const timing = structuredClone(baseTiming);
@@ -57,6 +59,27 @@ const runCase = ({name, mutateContract, mutateTiming, expectedExit, expectedText
 
 try {
   runCase({name: 'pass', expectedExit: 0, expectedText: 'Production preflight PASSED'});
+  runCase({
+    name: 'panel-opacity',
+    mutateContract: (contract) => {
+      contract.visualRules.textPanels.background = 'rgba(255,255,255,0.95)';
+      contract.visualRules.textPanels.backgroundAlpha = 0.95;
+    },
+    expectedExit: 1,
+    expectedText: 'text-panel-alpha',
+  });
+  runCase({
+    name: 'panel-radius',
+    mutateContract: (contract) => { contract.visualRules.textPanels.borderRadiusPx = 0; },
+    expectedExit: 1,
+    expectedText: 'text-panel-radius',
+  });
+  runCase({
+    name: 'panel-padding',
+    mutateContract: (contract) => { contract.visualRules.textPanels.minPaddingXPx = 24; },
+    expectedExit: 1,
+    expectedText: 'text-panel-padding',
+  });
   runCase({
     name: 'font-drift',
     mutateContract: (contract) => { contract.typography.bodyPx = 52; },

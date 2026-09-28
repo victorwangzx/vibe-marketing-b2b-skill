@@ -69,7 +69,7 @@ The purpose of generating people, facial expressions, hands, project objects, an
 Final Chinese text on covers and video stills must be added locally with real font files. Do not depend on image-generation model lettering.
 
 - Use the workspace font system: Alimama ShuHeiTi for large titles, Alibaba PuHuiTi for body and labels unless the project specifies otherwise.
-- For Xiaohongshu/Douyin 9:16 covers, video first frames, and vertical visual tests, use the default visual format from `cover-formulas.md` unless the user specifies another visual system: `1080 x 1920`, main title `120 pt`, body/supporting text `60 pt`, note/remark text `35 pt`, and measured rounded rectangles with `30% white` fill when text needs a background.
+- For Xiaohongshu/Douyin 9:16 covers, video first frames, and vertical visual tests, use the default visual format from `cover-formulas.md` unless the user specifies another visual system: `1080 x 1920`, main title `120 pt`, body/supporting text `60 pt`, note/remark text `35 pt`, and measured rounded rectangles with `30% white` fill when text needs a background. For Remotion delivery, these values must be contract tokens checked before render, never unaudited CSS literals.
 - Check visible glyphs, punctuation, line breaks, and alignment.
 - When exact Chinese title shapes matter, locate and bind the concrete OTF/TTF file rather than trusting the family name. For raster exports, a key title may be rendered to SVG outlines with `hb-view` before compositing so silent font substitution cannot change the final glyphs.
 - Text inside a panel, chip, bubble, or label must be vertically centered by visible glyph bounds, not by a guessed baseline offset.

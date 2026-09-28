@@ -1,6 +1,6 @@
 # Vibe Marketing B2B Skill
 
-Current release: **v2.0.0**. See [CHANGELOG.md](CHANGELOG.md) and the [v2.0.0 release notes](releases/v2.0.0.md).
+Current release: **v2.1.0**. See [CHANGELOG.md](CHANGELOG.md) and the [v2.1.0 release notes](releases/v2.1.0.md).
 
 Create B2B vibe-marketing strategy, platform-native copy, cover concepts, and short-video production plans for partnership acquisition, especially education and training institutions that need a new growth product line.
 
@@ -17,7 +17,7 @@ This Codex skill is not a generic marketing prompt. It treats B2B content as a b
 - Handles Xiaohongshu/Douyin-style covers, editor notes, hot tags, short-video scripts, and editable video design drafts.
 - Includes compliance and quality rules for lead filtering, platform tone, visual QA, and mixed Chinese-English voiceover terms.
 - Works as both a strategy skill and a production-prep skill before Remotion video rendering.
-- Ships a render-blocking Remotion production contract gate for typography, line breaks, narration timing, media integrity, lip-sync approval, and post-render QA.
+- Ships a render-blocking Remotion production contract gate for typography, line breaks, text-panel opacity/radius/padding, narration timing, media integrity, lip-sync approval, and post-render QA.
 
 ## When To Use
 
@@ -115,7 +115,7 @@ vibe-marketing-b2b/references/dependencies.md
 
 The skill defaults to draft-first production: create an editable Markdown video design draft, wait for confirmation, then render only when the user asks to proceed.
 
-Starting with v2.0.0, final Remotion delivery is contract-gated. The approved draft is translated into `production-contract.json`, locked, and consumed directly by Remotion. The preflight blocks typography drift, orphan lines, punctuation-timing errors, checksum mismatches, timeline gaps, unapproved visible-speaker shots, and policy violations before rendering. The post-render audit checks media start times, decode, duration, loudness, true peak, and isolated flashes.
+Starting with v2.0.0, final Remotion delivery is contract-gated. In v2.1.0, the gate also blocks text-panel drift: the default `30% white` background, `24-36 px` corner radius, and at least `48 px` horizontal padding must be contract tokens used by every declared panel selector. The approved draft is translated into `production-contract.json`, locked, and consumed directly by Remotion. The preflight blocks typography drift, orphan lines, panel-style violations, punctuation-timing errors, checksum mismatches, timeline gaps, unapproved visible-speaker shots, and policy violations before rendering. The post-render audit checks media start times, decode, duration, loudness, true peak, and isolated flashes.
 
 The layout gate requires Playwright and a Chromium-compatible browser. The post-render gate requires FFmpeg and FFprobe. See [`references/remotion-production-contract.md`](vibe-marketing-b2b/references/remotion-production-contract.md) for configuration and commands.
 

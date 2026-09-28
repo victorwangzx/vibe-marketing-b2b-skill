@@ -4,6 +4,14 @@
 
 Any workflow version bump must be published as one synchronized release: update the skill metadata, this revision history, the official GitHub repository README and CHANGELOG, a versioned release-notes file, and the matching GitHub tag/Release. Do not describe a version as published while the local skill and public repository differ.
 
+## vibe-marketing-b2b / vibe-marketing-b2b-h3 v2.1.0 — 2026-09-28
+
+- Converted the established `30% white`, `24-36 px` rounded-corner, and `48 px` horizontal-padding text-panel baseline from prose into machine-readable production-contract tokens.
+- Added render-blocking checks for panel opacity, radius, padding, contract CSS-variable exports, and every declared audience-facing panel selector.
+- Updated the workspace initializer so new projects begin with the compliant panel tokens instead of permissive legacy values.
+- Added negative regression cases proving that near-opaque panels, missing radius, and insufficient padding fail preflight.
+- Reaffirmed the H3 FL2V rule that independent shots use one approved first frame with the last-frame socket disconnected; connecting the same still to both ends is a freeze-inducing failure.
+
 ## vibe-marketing-b2b v2.0.0 — 2026-09-24
 
 This is a breaking production-workflow revision for rendered Remotion videos. Strategy, copy-only, article, cover-concept, and design-draft-only tasks remain unchanged.
