@@ -4,6 +4,13 @@
 
 Any workflow version bump must be published as one synchronized release: update the skill metadata, this revision history, the official GitHub repository README and CHANGELOG, a versioned release-notes file, and the matching GitHub tag/Release. Do not describe a version as published while the local skill and public repository differ.
 
+## vibe-marketing-b2b / vibe-marketing-b2b-h3 v2.1.1 — 2026-09-28
+
+- Made user-provided and previously approved product/evidence clips immutable by file, checksum, time range, aspect ratio, and display scale.
+- Defined an explicit `80%` placement as a centered complete frame occupying exactly 80% of canvas width, with height derived from the original aspect ratio.
+- Prohibited `object-fit: cover`, local enlargement, and independent timestamp reselection for approved evidence clips.
+- Added Victor face, mouth, and head-silhouette exclusion zones plus first/middle/last and boundary-frame QA; central placement may overlap hand gestures.
+
 ## vibe-marketing-b2b / vibe-marketing-b2b-h3 v2.1.0 — 2026-09-28
 
 - Converted the established `30% white`, `24-36 px` rounded-corner, and `48 px` horizontal-padding text-panel baseline from prose into machine-readable production-contract tokens.

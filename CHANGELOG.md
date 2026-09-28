@@ -2,6 +2,18 @@
 
 All notable workflow changes are recorded here. Versions follow Semantic Versioning for the published skill package.
 
+## [2.1.1] - 2026-09-28
+
+### Fixed
+
+- Previously approved product/evidence clips are now immutable sources: exact file, checksum, time range, aspect ratio, and display scale must be preserved.
+- An explicit 80% clip scale now means the complete frame is centered at 80% of canvas width with no crop or local enlargement.
+- Clip overlays must avoid Victor's face, mouth, and head silhouette, including at shot boundaries; central placement may overlap hand gestures.
+
+### Compatibility
+
+- No contract-schema change is required. Existing projects should record approved clip identity and placement in their manifest and use whole-frame `contain` presentation.
+
 ## [2.1.0] - 2026-09-28
 
 ### Added
