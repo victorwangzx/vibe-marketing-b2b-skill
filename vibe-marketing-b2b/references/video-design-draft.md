@@ -10,7 +10,7 @@ Do not treat the draft as a loose script. It is the main quality gate for the fi
 
 The video design draft must be confirmed as its own step. Do not move into image generation, voiceover generation, Remotion/HyperFrames implementation, or rendering until the user has had a chance to edit the Markdown file and explicitly approve the draft, unless the user explicitly says to skip this confirmation.
 
-For a Remotion delivery, approval of this draft is followed by a separate production-contract step. Translate the approved canvas, 120/60/35 typography, text, line limits, panel geometry, narration timing, punctuation pauses, media, shot timing, visible-speaker ranges, motion/camera policy, and QA thresholds into `production-contract.json`, then lock it before implementation. Read and follow `remotion-production-contract.md`; do not manually re-enter a second set of values in TSX or CSS.
+For a Remotion delivery, approval of this draft is followed by a separate production-contract step. Translate the approved canvas, title/body/caption/note typography of `120/60/40/30`, text, line limits, panel geometry, narration timing, punctuation pauses, media, shot timing, visible-speaker ranges, motion/camera policy, and QA thresholds into `production-contract.json`, then lock it before implementation. Read and follow `remotion-production-contract.md`; do not manually re-enter a second set of values in TSX or CSS.
 
 Default location:
 
@@ -25,7 +25,7 @@ Every B2B video design draft should include these sections:
 - Title: use the approved video/topic title when one exists.
 - Basic setup: target buyer, institution type, platform ratio, planned duration, tone, core point, visual center, and related cover/source files.
 - First-frame cover: the video opening frame should also serve as the platform cover unless the user explicitly requests a separate cover.
-- Visual format defaults: unless another visual system is specified, the first-frame cover and major vertical visual states should follow `cover-formulas.md` `Today Visual Format Defaults`: `1080 x 1920`, title `120 pt`, body/supporting text `60 pt`, note/remark text `35 pt`, and measured rounded text backgrounds with `30% white` fill.
+- Visual format defaults: unless another visual system is specified, the first-frame cover and major vertical visual states should follow `cover-formulas.md` `Today Visual Format Defaults`: `1080 x 1920`, title `120 pt`, body/supporting text `60 pt`, subtitle/caption text `40 pt`, note/remark text `30 pt`, and measured rounded text backgrounds with `30% white` fill.
 - B2B diagnosis: real operating pain, qualified audience, unsuitable leads, and why the timing is appropriate.
 - First-3-second hook: voiceover opening, on-screen text, visual motion, and why it should stop the intended B-end buyer.
 - Film-style scene structure: scene-by-scene plan with narrative function, time range, shot size, camera/viewpoint, picture, screen text, production-ready voiceover, rhythm/motion, and transition notes.
@@ -228,8 +228,8 @@ Remotion动效/节奏/转场：
 
 ## 字幕与排版
 
-- 默认竖版视觉规范：1080 x 1920；大标题 120 pt；正文/辅助文字 60 pt；备注 35 pt；文字底色默认 30% 白色圆角矩形
-- Remotion实现必须从已锁定生产契约读取120/60/35字号；禁止为了容纳长句在实现阶段擅自缩小字号。应缩短单屏文字、调整时间切片或重排内容，并通过真实字体行盒检查。
+- 默认竖版视觉规范：1080 x 1920；大标题 120 pt；正文/辅助文字 60 pt；字幕 40 pt；备注 30 pt；文字底色默认 30% 白色圆角矩形
+- Remotion实现必须从已锁定生产契约读取120/60/40/30字号；禁止为了容纳长句在实现阶段擅自缩小字号。应缩短单屏文字、调整时间切片或重排内容，并通过真实字体行盒检查。
 - 圆角：苹果式软圆角，1080 x 1920 画布上可从 24-36 px 起调
 - 文字效果：仅主大标题必要时可用轻微描边/投影/高光边；正文、备注、字幕、标签、lower-third、overlay、chip、label 禁止白色浮雕、高光投影、发光、描边
 - 可见画面：不得出现“选题/交付/素材/脚本/设计稿/版本”等内部流程标签

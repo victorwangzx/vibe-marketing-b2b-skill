@@ -2,6 +2,17 @@
 
 All notable workflow changes are recorded here. Versions follow Semantic Versioning for the published skill package.
 
+## [2.1.2] - 2026-09-29
+
+### Changed
+
+- The default vertical-video typography is now title 120 pt, body 60 pt, subtitle/caption 40 pt, and note/remark 30 pt.
+- Captions now use their own locked `captionPx` token and line-height, rather than inheriting the 60 pt body token.
+
+### Compatibility
+
+- New workspaces receive the four tokens automatically. Existing Remotion projects must add `captionPx: 40`, `captionLineHeight`, and the `--caption-size` CSS binding, update `notePx` to 30, then create a new production-contract lock before rendering.
+
 ## [2.1.1] - 2026-09-28
 
 ### Fixed

@@ -52,9 +52,11 @@ const contract = {
   typography: {
     titlePx: 120,
     bodyPx: 60,
-    notePx: 35,
+    captionPx: 40,
+    notePx: 30,
     sectionTitlePx: 82,
     bodyLineHeight: 1.28,
+    captionLineHeight: 1.3,
     noteLineHeight: 1.35,
     fonts: {
       display: {family: 'ShuHei', file: 'public/AlimamaShuHeiTi-Bold.otf', sha256: ''},

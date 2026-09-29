@@ -49,7 +49,7 @@ try {
     ? pass('contract-lock', `${actualContractHash} approved ${lock.approvedAt}`)
     : fail('contract-lock', `contract checksum ${actualContractHash} != approved ${lock.contractSha256}`);
   const lockedTypography = lock.approvedTypography ?? {};
-  for (const token of ['titlePx', 'bodyPx', 'notePx']) {
+  for (const token of ['titlePx', 'bodyPx', 'captionPx', 'notePx']) {
     contract.typography[token] === lockedTypography[token]
       ? pass('locked-typography', `${token}=${contract.typography[token]}px`)
       : fail('locked-typography', `${token}=${contract.typography[token]}px != approved ${lockedTypography[token]}px`);
@@ -123,7 +123,7 @@ const bindingRequirements = [
   ['src/Video.tsx', /contract\.captions\.find/, 'captions come from the contract'],
   ['src/Video.tsx', /contract\.infos\.find/, 'policy panels come from the contract'],
   ['src/Video.tsx', /style=\{contractStyle\}/, 'contract CSS variables are mounted'],
-  ['src/style.css', /\.caption span\s*\{[\s\S]*?font-size:\s*var\(--body-size\)/, 'caption uses the body-size token'],
+  ['src/style.css', /\.caption span\s*\{[\s\S]*?font-size:\s*var\(--caption-size\)/, 'caption uses the caption-size token'],
   ['src/style.css', /\.infoPolicy\s*\{[\s\S]*?font-size:\s*var\(--body-size\)/, 'policy copy uses the body-size token'],
   ['src/style.css', /\.coverTitleNote\s*\{[\s\S]*?font-size:\s*var\(--note-size\)/, 'remarks use the note-size token'],
   ['src/style.css', /\.caption span\s*\{[\s\S]*?max-width:\s*var\(--caption-outer-width\)/, 'caption width comes from the contract'],
@@ -315,7 +315,11 @@ const auditLayout = async () => {
           group,
           font,
           fontSize,
-          lineHeight: group.fontSizeToken === 'notePx' ? contract.typography.noteLineHeight : contract.typography.bodyLineHeight,
+          lineHeight: group.fontSizeToken === 'notePx'
+            ? contract.typography.noteLineHeight
+            : group.fontSizeToken === 'captionPx'
+              ? contract.typography.captionLineHeight
+              : contract.typography.bodyLineHeight,
           letterSpacing: contract.textRules.letterSpacingPx,
         });
         results.push({...result, groupId: group.id, maxLines: group.maxLines, expectedFontSize: fontSize});

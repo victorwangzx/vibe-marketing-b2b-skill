@@ -18,6 +18,8 @@ Each Remotion project must contain:
 - A narration timing manifest and immutable narration WAV.
 - A visible-speaker review record for every readable narrator mouth.
 
+For the default `1080 x 1920` vertical format, `production-contract.json` must define separate typography tokens of `titlePx: 120`, `bodyPx: 60`, `captionPx: 40`, and `notePx: 30`. Captions use `captionPx`, never `bodyPx`; captions and notes also carry their own line-height values in the contract.
+
 The production contract must also define `visualRules.textPanels`. The default baseline is `rgba(255,255,255,0.30)`, a `24-36 px` Apple-like corner radius, and at least `48 px` horizontal padding on a `1080 x 1920` canvas. List every audience-facing text-panel CSS selector in `visualRules.textPanels.selectors`; each listed selector must bind the shared contract variables for background, radius, and horizontal padding. Hard-coded near-opaque fills or missing radius/padding bindings fail preflight.
 
 Remotion source must import the contract and derive composition settings, text, timeline arrays, media paths, and CSS variables from it. Do not keep a second manually maintained set of caption arrays, font sizes, panel widths, or shot timings in TSX/CSS.

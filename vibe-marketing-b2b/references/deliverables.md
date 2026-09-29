@@ -115,7 +115,7 @@ Default format:
 
 - 9:16, 1080 x 1920.
 - For covers, the core title/subtitle/key visual must sit within the middle 3:4 thumbnail-safe area defined in `cover-formulas.md`.
-- Apply the `Today Visual Format Defaults` in `cover-formulas.md` unless the user specifies another visual system: title `120 pt`, body/supporting text `60 pt`, note/remark text `35 pt`, and text backgrounds as measured rounded rectangles with `30% white` fill.
+- Apply the `Today Visual Format Defaults` in `cover-formulas.md` unless the user specifies another visual system: title `120 pt`, body/supporting text `60 pt`, subtitle/caption text `40 pt`, note/remark text `30 pt`, and text backgrounds as measured rounded rectangles with `30% white` fill.
 - Use a real or realistic education/business scene first, then deterministic local typography.
 
 Must include:
@@ -138,7 +138,7 @@ QA:
 
 - Inspect full 9:16 image.
 - If the artifact is a Xiaohongshu cover, verify the middle 3:4 safe area or use the safe-area coordinates.
-- Verify the default typography/background values when applicable: title `120 pt`, body `60 pt`, note `35 pt`, `30% white` rounded text backgrounds, and Apple-like corner radius.
+- Verify the default typography/background values when applicable: title `120 pt`, body `60 pt`, subtitle/caption `40 pt`, note `30 pt`, `30% white` rounded text backgrounds, and Apple-like corner radius.
 - Check punctuation, line breaks, no orphan final lines where a phrase/sentence leaves only one character or one character plus punctuation on the last line, and no generated-text remnants. Deliberate one-character labels are acceptable.
 
 ## Dual-Cover Delivery Contract

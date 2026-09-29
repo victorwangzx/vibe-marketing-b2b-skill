@@ -4,6 +4,12 @@
 
 Any workflow version bump must be published as one synchronized release: update the skill metadata, this revision history, the official GitHub repository README and CHANGELOG, a versioned release-notes file, and the matching GitHub tag/Release. Do not describe a version as published while the local skill and public repository differ.
 
+## vibe-marketing-b2b / vibe-marketing-b2b-h3 v2.1.2 — 2026-09-29
+
+- Changed the vertical-video typography baseline to title/body/subtitle-or-caption/note of `120/60/40/30`.
+- Made captions a dedicated `captionPx` production-contract token with its own line-height, rather than inheriting `bodyPx`.
+- Updated the initializer, lock, preflight binding checks, and regression-test lock fixture so a caption-token mismatch blocks rendering.
+
 ## vibe-marketing-b2b / vibe-marketing-b2b-h3 v2.1.1 — 2026-09-28
 
 - Made user-provided and previously approved product/evidence clips immutable by file, checksum, time range, aspect ratio, and display scale.

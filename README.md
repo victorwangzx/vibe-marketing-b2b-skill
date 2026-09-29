@@ -1,6 +1,6 @@
 # Vibe Marketing B2B Skill
 
-Current release: **v2.1.1**. See [CHANGELOG.md](CHANGELOG.md) and the [v2.1.1 release notes](releases/v2.1.1.md).
+Current release: **v2.1.2**. See [CHANGELOG.md](CHANGELOG.md) and the [v2.1.2 release notes](releases/v2.1.2.md).
 
 Create B2B vibe-marketing strategy, platform-native copy, cover concepts, and short-video production plans for partnership acquisition, especially education and training institutions that need a new growth product line.
 
@@ -18,6 +18,7 @@ This Codex skill is not a generic marketing prompt. It treats B2B content as a b
 - Includes compliance and quality rules for lead filtering, platform tone, visual QA, and mixed Chinese-English voiceover terms.
 - Works as both a strategy skill and a production-prep skill before Remotion video rendering.
 - Ships a render-blocking Remotion production contract gate for typography, line breaks, text-panel opacity/radius/padding, narration timing, media integrity, lip-sync approval, and post-render QA.
+- Uses distinct default vertical-video tokens: title 120 pt, body 60 pt, captions 40 pt, and notes 30 pt.
 
 ## When To Use
 

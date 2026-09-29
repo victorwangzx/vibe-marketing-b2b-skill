@@ -62,7 +62,8 @@ Use these defaults for Xiaohongshu/Douyin 9:16 covers, video first frames, and v
 - The visual must use a recognizable scene or clearly reserved text area. Do not treat abstract shapes, generic icon cards, or hard-to-identify programmatic drawings as scene evidence.
 - Main title: `120 pt`, preferably Alimama ShuHeiTi. It may use a subtle stroke, shadow, or highlight edge only when needed for hierarchy or readability.
 - Body/supporting text: `60 pt`, preferably Alibaba PuHuiTi Medium. Do not add white emboss, white highlight shadow, glow, stroke, or similar effects.
-- Note/remark text: `35 pt`, preferably Alibaba PuHuiTi Regular. Do not add white emboss, white highlight shadow, glow, stroke, or similar effects.
+- Subtitle/caption text: `40 pt`, preferably Alibaba PuHuiTi Medium. Do not add white emboss, white highlight shadow, glow, stroke, or similar effects.
+- Note/remark text: `30 pt`, preferably Alibaba PuHuiTi Regular. Do not add white emboss, white highlight shadow, glow, stroke, or similar effects.
 - If text needs a background, use a measured rounded rectangle filled with `30% white` by default.
 - Rounded text backgrounds should use an Apple-like corner radius: soft and visible, but not oversized. As a practical starting point on a 1080 x 1920 canvas, use about `24-36 px` radius depending on the block size.
 - Text backgrounds must be sized from the actual text bounding box and line count, with comfortable padding and visual vertical centering.

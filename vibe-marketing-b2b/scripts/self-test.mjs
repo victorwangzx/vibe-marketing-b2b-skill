@@ -43,7 +43,7 @@ const runCase = ({name, mutateContract, mutateTiming, expectedExit, expectedText
     contractSha256: contractHash,
     approvedAt: 'self-test',
     approvedBy: 'automated-test',
-    approvedTypography: {titlePx: 120, bodyPx: 60, notePx: 35},
+    approvedTypography: {titlePx: 120, bodyPx: 60, captionPx: 40, notePx: 30},
   });
 
   const report = resolve(projectRoot, `../../qa/production-gate/self-test-${name}.json`);

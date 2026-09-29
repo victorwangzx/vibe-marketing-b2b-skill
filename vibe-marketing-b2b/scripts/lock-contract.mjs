@@ -26,6 +26,7 @@ const lock = {
   approvedTypography: {
     titlePx: contract.typography.titlePx,
     bodyPx: contract.typography.bodyPx,
+    captionPx: contract.typography.captionPx,
     notePx: contract.typography.notePx,
   },
   note,
