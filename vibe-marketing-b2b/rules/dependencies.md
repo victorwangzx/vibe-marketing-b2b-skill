@@ -43,14 +43,7 @@ Therefore, the video design draft must separate:
 - Voiceover wording: what the TTS engine should synthesize.
 - Confirmation status: whether the user has approved the pronunciation or Chinese equivalent.
 
-For Kokoro, prefer confirmed Chinese wording for semantic terms instead of forcing English acronyms. Current default mappings:
-
-- `STEM` -> `科创融合课程`
-- `PBL` -> `项目化学习`
-- `GPT` -> `生成式人工智能工具`
-- Semantic `AI` -> `人工智能`
-
-Do not silently change visual brand names. If a brand contains English letters, keep the standard on-screen brand display and confirm the voiceover wording separately before synthesis.
+For Kokoro, **must read and follow** [Kokoro英文统一中文释义规则](kokoro-english-policy.md). All English is spoken through Chinese meaning with no brand/acronym/letter-teaching exception; keep visual spelling unchanged. The linked policy owns mappings and the actual-input no-English gate, not this environment reference.
 
 ## Pre-Production Environment Checklist
 

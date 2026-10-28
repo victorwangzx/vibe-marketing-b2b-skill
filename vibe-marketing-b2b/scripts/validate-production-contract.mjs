@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 import {createHash} from 'node:crypto';
+import {inspectBreath} from './validate-dialogue-breath.mjs';
+import {inspectCaptionPolicy} from './caption-policy.mjs';
 import {createRequire} from 'node:module';
 import {existsSync, readFileSync, writeFileSync, mkdirSync} from 'node:fs';
 import {homedir} from 'node:os';
@@ -61,10 +63,26 @@ try {
 if (contract.schemaVersion !== 1) fail('contract-schema', 'schemaVersion must be 1');
 else pass('contract-schema', `v${contract.contractVersion}`);
 
+if (contract.resolutionPolicy?.minShortSidePx !== undefined) {
+  const minimum = Number(contract.resolutionPolicy.minShortSidePx);
+  const shortSide = Math.min(Number(contract.canvas.width), Number(contract.canvas.height));
+  Number.isFinite(minimum) && minimum >= 1080 && shortSide >= minimum
+    ? pass('minimum-resolution', `${contract.canvas.width}x${contract.canvas.height}, short side ${shortSide}px`)
+    : fail('minimum-resolution', `${contract.canvas.width}x${contract.canvas.height} below required ${minimum}px short side`);
+}
+
 for (const [fontName, font] of Object.entries(contract.typography?.fonts ?? {})) {
   checkHash(`font-${fontName}`, font.file, font.sha256);
 }
 checkHash('narration-master', contract.audio.narrationFile, contract.audio.narrationSha256);
+if (contract.audio.breathDesignRequired === true || contract.audio.breathDesign) {
+  const breath = contract.audio.breathDesign;
+  if (!breath?.plan || !breath?.review) fail('speech-breath-design', 'missing pre-synthesis plan or listening review');
+  else {
+    const result = inspectBreath({plan:filePath(breath.plan), review:filePath(breath.review), master:filePath(contract.audio.narrationFile), expectedProfile:breath.timingProfile});
+    result.passed ? pass('speech-breath-design', 'plan, measured intervals, listening and master checksum agree') : fail('speech-breath-design', result.errors.join('; '));
+  }
+}
 
 const timingPath = filePath(contract.audio.timingManifest);
 try {
@@ -193,6 +211,8 @@ if (!panelRules) {
     }
   }
 }
+
+for (const error of inspectCaptionPolicy(contract).errors) fail('caption-single-line', error);
 
 const expectedLayoutWidths = {
   'cover-main': contract.layout.coverPanelWidthPx - 2 * contract.layout.coverPanelPaddingXPx,

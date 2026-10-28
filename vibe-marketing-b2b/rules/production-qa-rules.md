@@ -1,5 +1,7 @@
 # Production and QA Rules from Prior B2B Content Builds
 
+Cover design and delivery must follow [cover-delivery.md](cover-delivery.md), including full-bleed scenes, standalone dual exports, actual output/thumbnail/crop checks and immediate checked-file promotion to final.
+
 These are hard production and QA requirements for 2B education cooperation covers, short videos, Toutiao covers, Xiaohongshu notes, image sets, and platform derivatives. They come from demonstrated production failures. A failed applicable check blocks final delivery unless the user explicitly overrides it.
 
 For every Remotion video, the production contract gate in `remotion-production-contract.md` is mandatory. Its locked typography, browser line-box inspection, punctuation timing, media checksums, visible-speaker approval, and post-render media audit convert the applicable rules below into render-blocking checks. A visual spot check does not replace the automated gate, and the gate does not replace normal-speed human review.
@@ -66,13 +68,15 @@ The purpose of generating people, facial expressions, hands, project objects, an
 
 ## 6. Use Deterministic Typography, Not AI Text
 
+For dialogue captions, must read [single-line semantic caption segmentation](caption-segmentation.md). Captions occupy one line only; over-width text becomes later audio-aligned cues at semantic breath boundaries, never a second line, orphan character or silent font-size reduction.
+
 Final Chinese text on covers and video stills must be added locally with real font files. Do not depend on image-generation model lettering.
 
 - Use the workspace font system: Alimama ShuHeiTi for large titles, Alibaba PuHuiTi for body and labels unless the project specifies otherwise.
-- For Xiaohongshu/Douyin 9:16 covers, video first frames, and vertical visual tests, use the default visual format from `cover-formulas.md` unless the user specifies another visual system: `1080 x 1920`, main title `120 pt`, body/supporting text `60 pt`, subtitle/caption text `40 pt`, note/remark text `30 pt`, and measured rounded rectangles with `30% white` fill when text needs a background. For Remotion delivery, these values must be contract tokens checked before render, never unaudited CSS literals.
+- For Xiaohongshu/Douyin 9:16 covers, video first frames, and vertical visual tests, use the default visual format from `cover-formulas.md` unless the user specifies another visual system: `1080 x 1920`, main title `120 px`, body/supporting text `60 px`, subtitle/caption text `40 px`, note/remark text `30 px`, and measured rounded rectangles with `30% white` fill when text needs a background. For Remotion delivery, these values must be contract tokens checked before render, never unaudited CSS literals.
 - Check visible glyphs, punctuation, line breaks, and alignment.
 - When exact Chinese title shapes matter, locate and bind the concrete OTF/TTF file rather than trusting the family name. For raster exports, a key title may be rendered to SVG outlines with `hb-view` before compositing so silent font substitution cannot change the final glyphs.
-- Text inside a panel, chip, bubble, or label must be vertically centered by visible glyph bounds, not by a guessed baseline offset.
+- Text inside a panel, chip, bubble, or label must be vertically centered by visible glyph bounds, not by a guessed baseline offset. For subtitle backgrounds, must read [fixed panel geometry and visible-ink centering](caption-panel-geometry.md), lock panel height/center and calibrated baseline, and inspect actual-export top/bottom clearances.
 - Visible artifacts must be audience-facing. Do not include internal workflow labels, asset names, approval/review wording, or production notes on covers or video frames.
 
 ## 6A. Generate Victor From Identity Reference, Not A Photo Filter
@@ -107,7 +111,7 @@ Minimum expectation:
 - Default new-media delivery to vertical-first composition: use `9:16` (`1080 x 1920`) for Douyin, WeChat Channels, Xiaohongshu, Kuaishou, Reels, and Shorts; use `3:4` only for a deliberately denser poster-like treatment. Use horizontal `16:9` only when the requested destination is meeting playback, courseware, Bilibili, or another widescreen context.
 - Do not hold one still image or unchanged scene state longer than about 6-8 seconds unless it contains multiple visible foreground-animation beats, crop changes, object movement, or staged information reveals. Background zoom alone does not satisfy this requirement.
 - If using local Kokoro voiceover, check sentence segmentation and gaps. Avoid unnatural long pauses from line-by-line synthesis.
-- If a brand name contains an English acronym such as "AI", keep the visual brand name unchanged and make the voiceover use standard English-letter pronunciation. Prefer a tested pronunciation form such as "A-I" when the TTS model otherwise weakens or misreads the abbreviation. Do not use Chinese-character approximations such as "诶、爱", and do not replace brand-name "AI" with "人工智能".
+- For Kokoro, **must read and follow** [Kokoro英文中文释义规则](kokoro-english-policy.md): all English, including brand AI, becomes contextual Chinese meaning in the actual speech input; preserve visual brand spelling, no letter-by-letter or Chinese-homophone exceptions.
 - Before generating voiceover, scan the script for mixed Chinese-English terms, acronyms, brand English, and technical labels. The video design draft should already contain the production-ready, localized voiceover wording plus a confirmation checklist: keep visually, translate in voiceover, or use voiceover-only wording. For Kokoro, prefer confirmed pure-Chinese wording instead of forcing English acronym pronunciation. Current confirmed mappings: "STEM" -> "科创融合课程", "PBL" -> "项目化学习", "GPT" -> "生成式人工智能工具", semantic "AI" -> "人工智能".
 - Before any Chinese synthesis, identify potentially polyphonic terms from sentence meaning. Preserve the visible wording, register any necessary pronunciation override in the TTS lexicon, inspect the resulting phonemes when the tool supports it, and reject audio with a known wrong reading rather than changing the publishable term merely to avoid the pronunciation problem.
 - Unresolved voiceover terminology is a blocker to voiceover production, not permission to omit narration. Confirm the terms or use approved plain-Chinese wording before rendering.
@@ -137,7 +141,7 @@ Before final delivery, perform QA against the deliverable type in `deliverables.
 For covers, inspect:
 
 - Final canvas ratio and platform fit.
-- Default visual format values when applicable: `1080 x 1920`, title `120 pt`, body/supporting text `60 pt`, subtitle/caption text `40 pt`, note/remark text `30 pt`, and text backgrounds as `30% white` rounded rectangles.
+- Default visual format values when applicable: `1080 x 1920`, title `120 px`, body/supporting text `60 px`, subtitle/caption text `40 px`, note/remark text `30 px`, and text backgrounds as `30% white` rounded rectangles.
 - Approved title preserved.
 - Text safe area and platform thumbnail behavior.
 - No text over faces, hands, key objects, project work, or core actions.
@@ -148,7 +152,7 @@ For covers, inspect:
 
 For videos, inspect:
 
-- The first frame works as the cover: approved title, hierarchy, thumbnail readability, and business signal are visible before motion starts.
+- The standalone cover passes title, hierarchy, thumbnail readability, full-bleed and business-signal checks. Check a first-frame poster only when that opening was specifically approved.
 - The first 3 seconds separately: at least 2-3 sampled frames should show meaningful visual or information progression, and the visible text should match the spoken hook.
 - Key frames from every scene, not only the first frame.
 - Scene recognizability: each sampled scene should be understandable without relying on the subtitle. If a viewer cannot tell whether the image is a classroom,教研会, project-making table,科技节展示, teacher workflow, product demo, or other intended situation, the scene fails QA even if the file renders and the text is readable.
@@ -201,3 +205,5 @@ For educational infographics, lifecycle diagrams, process posters, food/category
 For Xiaohongshu image sets, keep the cover and all cards at the same final size. Default to `1080 x 1920`; place core title, subtitle, and key visual inside the middle 3:4 thumbnail-safe area defined in `cover-formulas.md`, then inspect both the full frame and that crop. Do not export a separate 3:4 cover unless requested.
 
 For Toutiao articles, create a dedicated 4:3 landscape cover with a recognizable scene and one dominant title. Do not reuse or center-crop the Xiaohongshu cover, and avoid dense secondary checklists or explanatory panels.
+
+片内文字布局/安全检查必须完整阅读[text-safe-area.md](text-safe-area.md)，按完整文字组（含底板、效果及动效包络）检查；封面裁切坐标不能代替视频安全区。

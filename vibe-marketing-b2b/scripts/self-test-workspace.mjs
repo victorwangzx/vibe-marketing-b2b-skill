@@ -16,6 +16,9 @@ try {
   const first = spawnSync(process.execPath, [initializer, '--root', projectRoot, '--project-id', 'demo-project'], {encoding: 'utf8'});
   if (first.status !== 0) throw new Error(first.stderr || 'first initializer run failed');
   const contractPath = resolve(projectRoot, 'source/remotion/production-contract.json');
+  const initialized = JSON.parse(readFileSync(contractPath, 'utf8'));
+  if (initialized.audio?.breathDesign?.timingProfile !== 'segmented-v2') throw new Error('new project missing strict segmented timing profile');
+  if (initialized.textRules?.captionPolicy !== 'single-line-semantic-v1' || initialized.textRules.maxCaptionLines !== 1) throw new Error('new project missing single-line caption policy');
   const before = hash(contractPath);
   const second = spawnSync(process.execPath, [initializer, '--root', projectRoot, '--project-id', 'demo-project'], {encoding: 'utf8'});
   if (second.status !== 0) throw new Error(second.stderr || 'second initializer run failed');

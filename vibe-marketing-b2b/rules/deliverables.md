@@ -1,5 +1,7 @@
 # Vibe Marketing B2B Deliverables
 
+Before cover work, **must read and follow** [cover-delivery.md](cover-delivery.md). Its full-bleed, standalone-cover and final-folder rules govern the cover references below.
+
 Use this reference to decide what to produce, what must be included, and what quality bar applies. The default business context is selling a 科创赛考 course/product-line system to B-end education or training institutions.
 
 ## Default Strategic Standard
@@ -21,13 +23,13 @@ Default sequence for a full platform content item:
 2. Diagnose target institution, buyer, real pain, fit timing, and unsuitable leads.
 3. Choose the content type and core point of view.
 4. Draft the publishable copy package: title, editor's note or Toutiao article body, lead-quality filter, and platform-appropriate tags when needed.
-5. Design and export both required covers: the Xiaohongshu/Douyin 9:16 poster cover as the video's first-frame hook, and a separately composed 4:3 Toutiao-style landscape banner cover. The second cover is required even when no Toutiao article is included.
+5. Design and export both required covers: the standalone full-bleed Xiaohongshu/Douyin 9:16 poster cover, and a separately composed 4:3 Toutiao-style landscape banner cover. The second cover is required even when no Toutiao article is included.
 6. Create the editable short-video design draft.
 7. Wait for the user's draft confirmation unless explicitly told to proceed.
 8. Check production dependencies and commercial-use assumptions when rendering is requested.
 9. Confirm voiceover terms when narration contains mixed Chinese-English terms or technical terms.
 10. Produce the rendered video.
-11. QA the video, the 9:16 first-frame poster cover, the independent 4:3 landscape banner cover, editor's note, tags, and final files.
+11. QA the video, the standalone 9:16 poster cover, the independent 4:3 landscape banner cover, editor's note, tags, and final files.
 
 If the user has already provided a specific target institution, buyer, title, pain point, platform, product, hook, visual direction, or delivery format, skip the corresponding discovery step. Do not ask the user to repeat information that is already clear. Instead:
 
@@ -41,13 +43,13 @@ If the user has already provided a specific target institution, buyer, title, pa
 For a full Xiaohongshu/Douyin-style B2B content item, the final deliverables are:
 
 - Rendered short video.
-- A 9:16 poster-cover file integrated as the video's first-frame hook, not a separate unrelated cover concept.
+- A standalone full-bleed 9:16 poster cover, aligned with the approved film topic and hook.
 - A separately composed 4:3 Toutiao-style landscape banner-cover file. It is required for every complete content package, not only when a Toutiao article is requested.
 - Publishable post title. For Xiaohongshu, it must pass the title limit and counting rule in `xiaohongshu-taboo.md`.
 - Editor's note/body copy.
 - Exactly 5 related hot tags.
 
-The video first frame should carry the approved 9:16 cover title and visual signal. The exported 9:16 cover must match that first frame's title, hierarchy, and core visual unless the user explicitly requests a platform-specific variant. The required 4:3 cover may reflow the same approved title for its format, but must preserve its semantic promise, business signal, and visual direction.
+The cover is independently composed and exported; do not automatically overlay its title/note on the video. Preserve an explicitly approved first-frame-poster opening, otherwise follow the selected story opening. The required 4:3 cover may reflow the same approved title for its format, but must preserve its semantic promise, business signal, and visual direction.
 
 When a Toutiao/头条号 article is part of the package, also deliver:
 
@@ -115,7 +117,7 @@ Default format:
 
 - 9:16, 1080 x 1920.
 - For covers, the core title/subtitle/key visual must sit within the middle 3:4 thumbnail-safe area defined in `cover-formulas.md`.
-- Apply the `Today Visual Format Defaults` in `cover-formulas.md` unless the user specifies another visual system: title `120 pt`, body/supporting text `60 pt`, subtitle/caption text `40 pt`, note/remark text `30 pt`, and text backgrounds as measured rounded rectangles with `30% white` fill.
+- Apply the `Today Visual Format Defaults` in `cover-formulas.md` unless the user specifies another visual system: title `120 px`, body/supporting text `60 px`, subtitle/caption text `40 px`, note/remark text `30 px`, and text backgrounds as measured rounded rectangles with `30% white` fill.
 - Use a real or realistic education/business scene first, then deterministic local typography.
 
 Must include:
@@ -123,7 +125,7 @@ Must include:
 - One short high-impact title.
 - One supporting qualifier or filter when needed.
 - Visual evidence: people, classroom, project work, parent communication, product-line path, or成果展示.
-- When paired with a video, the cover should normally be the video's first frame and match the video opening hook.
+- When paired with a video, deliver the cover independently and preserve the approved topic/hook. Only use a cover-title first frame when specifically approved.
 
 Hard requirements:
 
@@ -138,14 +140,14 @@ QA:
 
 - Inspect full 9:16 image.
 - If the artifact is a Xiaohongshu cover, verify the middle 3:4 safe area or use the safe-area coordinates.
-- Verify the default typography/background values when applicable: title `120 pt`, body `60 pt`, subtitle/caption `40 pt`, note `30 pt`, `30% white` rounded text backgrounds, and Apple-like corner radius.
+- Verify the default typography/background values when applicable: title `120 px`, body `60 px`, subtitle/caption `40 px`, note `30 px`, `30% white` rounded text backgrounds, and Apple-like corner radius.
 - Check punctuation, line breaks, no orphan final lines where a phrase/sentence leaves only one character or one character plus punctuation on the last line, and no generated-text remnants. Deliberate one-character labels are acceptable.
 
 ## Dual-Cover Delivery Contract
 
 Every complete video-content package exports these two independent files:
 
-- `封面_9x16_海报_vX.Y.png`: 1080×1920 vertical poster cover. It carries the video first-frame hook and follows Deliverable 4 plus `cover-formulas.md`.
+- `封面_9x16_海报_vX.Y.png`: 1080×1920 vertical poster cover. It carries the approved topic/hook as a standalone full-bleed cover and follows Deliverable 4 plus `cover-formulas.md`.
 - `封面_4x3_头条横幅_vX.Y.png`: 4:3 landscape banner cover. It follows Deliverable 5 and the same typography, text-panel, subject-protection, Chinese line-break, and full-size visual-QA rules.
 
 The two covers must express the same approved promise, audience, evidence, and visual direction, while each is composed natively for its own canvas. Do not crop, stretch, letterbox, or merely resize either cover to produce the other. Do not treat the 4:3 banner as a lower-priority derivative: it receives the same local deterministic typography, measured text backing, safe-area check, and visual inspection as the 9:16 poster.
@@ -248,7 +250,7 @@ Use when the user asks to produce, render, or make the video.
 
 Default format:
 
-- Vertical 9:16, 1080 x 1920 for Xiaohongshu/Douyin unless otherwise requested.
+- Vertical 9:16, 1080 x 1920 minimum for new Xiaohongshu/Douyin videos unless the user explicitly chooses a smaller output. Lock this canvas before artwork, captions and motion work; do not rely on final-step enlargement of a finished 720 x 1280 edit to claim native 1080P detail.
 - Use local Kokoro voiceover by default for B2B promotional, sales, product-introduction, service-introduction, cooperation-pitch, or course-package videos. In these cases narration is considered necessary unless the user explicitly requests a silent, subtitle-only, poster-loop, background-screen, or visual-only version.
 
 Hard requirements:
@@ -256,7 +258,7 @@ Hard requirements:
 - Do not make a one-image video unless the user explicitly asks for a static poster video.
 - Do not deliver a promotional/service-introduction video with only music and subtitles unless the user explicitly approved that format. Voiceover is the primary carrier of the business argument; on-screen text supports it rather than replacing it.
 - If voiceover terminology is unresolved, do not omit narration as a workaround. Confirm the term handling first, or use confirmed workspace mappings and plain Chinese wording that avoids the unresolved term in the spoken script.
-- The approved cover should be integrated as the first frame of the video unless the user explicitly requests a different opening.
+- The approved cover is a separate deliverable; preserve any explicitly approved first-frame integration, but do not add it by default to a story-led opening.
 - For the first-frame cover and major vertical visual states, apply the `Today Visual Format Defaults` in `cover-formulas.md` unless another visual system is specified.
 - Design the first 3 seconds deliberately as an opening hook that combines picture, voice, and on-screen copy. It should show a clear change, question, contrast, or business signal before the viewer swipes away.
 - Use multiple scenes or dynamic logic states: diagnosis, comparison, path map, checklist, timeline, flow, or project evidence.
@@ -269,7 +271,7 @@ Hard requirements:
 
 QA:
 
-- Confirm video duration, resolution, video codec, and audio track.
+- Probe the actual exported file and confirm duration, dimensions (at least 1080 x 1920 for a new 9:16 delivery), video codec, and audio track. Inspect representative frames at that output size; source/detail quality is a separate visual check from container dimensions.
 - Confirm audio is not silent with a volume check or equivalent.
 - Inspect the first 3 seconds separately for hook strength: picture, voiceover, and on-screen text should reinforce the same B-end buyer problem or opportunity, with visible motion or information change.
 - Inspect key frames from every scene, not arbitrary intervals that miss scenes.

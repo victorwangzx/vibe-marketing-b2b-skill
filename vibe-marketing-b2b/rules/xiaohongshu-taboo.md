@@ -84,3 +84,11 @@ Use soft conversion prompts that invite self-screening rather than direct contac
 Do not force every post to convert. Some posts should only build category understanding or filter the audience.
 
 Match the closing prompt to the post's actual pain point. Do not force every closing sentence into "第二增长线". If the post is about renewal, use wording such as "如果你也面临续费的痛点，可以先……"; if it is about enrollment,成果展示, teacher delivery, or客单价, adapt the first clause accordingly. The second half should still use a compliant self-screening action such as 参考试点路径, 做适配判断, 小规模试点, or 复盘家长反馈, rather than direct contact or resource-claim wording.
+
+## 封面标题与发布标题分别撰写
+
+封面标题（封面图上叠加的文字）与发布文案标题是两个独立字段，必须分别撰写、记录和检查，不能使用同一句标题。封面标题负责信息流中迅速看懂主题/冲突，发布标题负责具体对象、问题或收获；两者兑现同一内容承诺，不增加未经证实的利益点。仅改标点、空格、换行或字符大小写不算不同标题。允许9:16与4:3封面共用同一封面标题。
+
+双标题必须形成可说明的互补关系，而非同义改写。封面标题优先承载可核验的**事实、数据、政策方向或结果信号**，让人一眼看见值得停留的主题；发布标题可侧重面向目标受众的**营销引导、专业判断或真实感慨**，说明这条内容能帮助谁看懂什么机制、方向或下一步。优先采用“**事实/政策方向 → 营销判断**”“**结果信号 → 机制/下一步追问**”或“**具体对象 → 可获得的决策收获**”。发布标题中的判断或感慨须和封面事实兑现同一承诺，并清楚保持事实与分析的边界。记录实际`titleRelationship`及其兑现位置；发布标题仍须遵守不超过20个可见字符的限制，不能为制造互补而扩写成第二段文案或加入未经证实的承诺。
+
+交付前将实际封面文字与实际发布标题并排核对，去除空格、标点并忽略大小写后相同则不通过，再人工检查是否只是机械换词。已明确批准的同名组合不得静默改写：保留批准证据，指出冲突并提出最小改动候选，按现有决策锁确认后替换。单独交付文案如已有封面须读取实际文字；尚无封面则记录待配对，不声称整包通过。策略使用说明与逐条自检只存在生产记录，不混入可直接发布的正文。

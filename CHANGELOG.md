@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.2.0 - 2026-10-28
+
+- Added mandatory core-message and sentence-stress analysis before breath planning or synthesis.
+- Added `emphasisPlan` validation against the exact spoken text.
+- Required contextual normal-speed audition; punctuation and waveform amplitude do not prove prominence.
+- Added the Shanghai AI-teacher-training example using the existing Victor/Kokoro `zm_yunyang` voice binding.
+
 All notable workflow changes are recorded here. Versions follow Semantic Versioning for the published skill package.
 
 ## [2.1.2] - 2026-09-29

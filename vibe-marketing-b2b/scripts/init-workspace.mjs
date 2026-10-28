@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import {createRuleLedger} from './init-rule-execution.mjs';
 import {mkdirSync, writeFileSync, existsSync} from 'node:fs';
 import {basename, resolve} from 'node:path';
 
@@ -49,6 +50,7 @@ const contract = {
   projectId,
   contractVersion: '0.1.0',
   canvas: {width: 1080, height: 1920, fps: 24, durationInFrames: 0, preRollFrames: 0},
+  resolutionPolicy: {minShortSidePx: 1080},
   typography: {
     titlePx: 120,
     bodyPx: 60,
@@ -65,11 +67,13 @@ const contract = {
     },
   },
   textRules: {
-    maxCaptionLines: 2,
+    captionPolicy: 'single-line-semantic-v1',
+    maxCaptionLines: 1,
     minLastLineGlyphs: 2,
     prohibitedLineStart: '，。？！；：、）》】”’',
     letterSpacingPx: 0,
   },
+  safeArea: {profile: 'adobe-conventional-80-v1', titleRect: {left:108,top:192,right:972,bottom:1728}, workingRect: {left:132,top:216,right:948,bottom:1704}, platformUiStatus: 'unverified', captionPanelHeightPx:108, captionPanelCenterYPx:1650},
   visualRules: {
     textPanels: {
       background: 'rgba(255,255,255,0.30)',
@@ -83,14 +87,16 @@ const contract = {
   layout: {
     coverPanelWidthPx: 560,
     coverPanelPaddingXPx: 48,
-    infoPanelSidePx: 72,
+    infoPanelSidePx: 132,
     infoPanelPaddingXPx: 48,
-    captionOuterWidthPx: 936,
+    captionOuterWidthPx: 816,
     captionPaddingXPx: 48,
     liveBoundarySidePx: 120,
     liveBoundaryPaddingXPx: 48,
   },
   audio: {
+    breathDesignRequired: true,
+    breathDesign: {timingProfile: 'segmented-v2', plan: '../../source/audio/breath-plan.json', review: '../../qa/audio/breath-review.json'},
     narrationFile: '',
     narrationSha256: '',
     timingManifest: '',
@@ -136,13 +142,18 @@ const manifest = {
 
 const productionScripts = {
   scripts: {
+    'preflight:rules': 'node $HOME/.codex/skills/vibe-marketing-b2b/scripts/validate-rule-execution.mjs --ledger ../../notes/rule-execution.json --stage prepare',
+    'qa:rules': 'node $HOME/.codex/skills/vibe-marketing-b2b/scripts/validate-rule-execution.mjs --ledger ../../notes/rule-execution.json --stage delivery --report ../../qa/rule-execution.json',
     preflight: 'node $HOME/.codex/skills/vibe-marketing-b2b/scripts/validate-production-contract.mjs --contract production-contract.json --report ../../qa/production-gate/preflight-production.json',
-    render: 'npm run preflight && remotion render <entry> <composition> ../../final/<output>.mp4 --gl=swangle --concurrency=1 --overwrite',
+    render: 'npm run preflight:rules && npm run preflight && remotion render <entry> <composition> ../../final/<output>.mp4 --gl=swangle --concurrency=1 --overwrite',
     'qa:postrender': 'node $HOME/.codex/skills/vibe-marketing-b2b/scripts/audit-render.mjs --contract production-contract.json --input ../../final/<output>.mp4 --report ../../qa/production-gate/postrender.json',
   },
 };
 
+const ruleLedger = createRuleLedger(['design','copy','cover','character','scene','audio','edit','render','delivery']);
+
 const files = [
+  ['notes/rule-execution.json', ruleLedger],
   ['source/remotion/production-contract.json', contract],
   ['source/remotion/package.production-scripts.json', productionScripts],
   ['notes/workspace-manifest.json', manifest],

@@ -47,8 +47,10 @@ task-folder/
 - `workflows`: renderer or H3 workflow files when applicable.
 - `renders/draft`: disposable technical renders.
 - `renders/review`: proof clips awaiting approval, especially visible-speaker shots.
-- `final`: only current deliverables approved for use.
+- `final`: current versioned delivery candidates as each asset is completed and quality checked; mark whole-package approval separately.
 - `qa`: machine reports, frame contacts, layout evidence, and lip-sync reviews.
 - `notes`: manifests and durable task notes.
 
 The generated contract begins with `status: draft`. Populate it from the approved design, copy or reference the actual media and fonts, calculate checksums, complete layout checks, and lock it only after approval. Do not treat the starter contract as render-ready.
+
+Archive each finished cover, publishable copy file and video in `final/` as soon as that asset passes its own visual or technical check. Do not wait for all other assets or the whole-film acceptance before placing a completed file there. Keep its current status (`candidate` or `approved`) in the task manifest so early archiving is never mistaken for user approval. After final acceptance, reconcile hashes and filenames across the package; retain requested review snapshots outside `final/` and move superseded delivery copies to recoverable Trash.

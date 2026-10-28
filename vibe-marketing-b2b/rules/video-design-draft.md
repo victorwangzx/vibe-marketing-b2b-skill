@@ -1,5 +1,7 @@
 # Short-Video Design Draft Deliverable
 
+Cover layout and handoff follow the mandatory [cover-delivery.md](cover-delivery.md). Plan the standalone cover separately from the approved video opening.
+
 Use this reference when the user asks for a short video, rendered video, Remotion/HyperFrames production, or any B2B new-media video that may later be generated.
 
 ## Role of the Draft
@@ -24,8 +26,8 @@ Every B2B video design draft should include these sections:
 
 - Title: use the approved video/topic title when one exists.
 - Basic setup: target buyer, institution type, platform ratio, planned duration, tone, core point, visual center, and related cover/source files.
-- First-frame cover: the video opening frame should also serve as the platform cover unless the user explicitly requests a separate cover.
-- Visual format defaults: unless another visual system is specified, the first-frame cover and major vertical visual states should follow `cover-formulas.md` `Today Visual Format Defaults`: `1080 x 1920`, title `120 pt`, body/supporting text `60 pt`, subtitle/caption text `40 pt`, note/remark text `30 pt`, and measured rounded text backgrounds with `30% white` fill.
+- Standalone covers and opening: export native full-bleed 9:16 and 4:3 covers independently. Do not require the video opening to serve as the cover; preserve a specifically approved first-frame-poster design.
+- Visual format defaults: unless another visual system is specified, the first-frame cover and major vertical visual states should follow `cover-formulas.md` `Today Visual Format Defaults`: `1080 x 1920`, title `120 px`, body/supporting text `60 px`, subtitle/caption text `40 px`, note/remark text `30 px`, and measured rounded text backgrounds with `30% white` fill.
 - B2B diagnosis: real operating pain, qualified audience, unsuitable leads, and why the timing is appropriate.
 - First-3-second hook: voiceover opening, on-screen text, visual motion, and why it should stop the intended B-end buyer.
 - Film-style scene structure: scene-by-scene plan with narrative function, time range, shot size, camera/viewpoint, picture, screen text, production-ready voiceover, rhythm/motion, and transition notes.
@@ -81,12 +83,14 @@ Rules:
 
 ## Production-Ready Voiceover
 
+Before estimating shots or synthesizing, read `speech-breath-design.md`. Include semantic breath groups, no-break terms, clause/list connections, sentence endings, speaker handoffs and resting/re-entry mouth behavior in the editable draft and machine-readable plan. Listen to the continuous audition before freezing the master. Camera cuts do not create new TTS starts.
+
 The voiceover in the design draft should be the version intended for synthesis, not a rough outline.
 
 For rendered B2B promotional, sales, product-introduction, service-introduction, cooperation-pitch, or course-package videos, the design draft must include production-ready voiceover and the final video must include synthesized Chinese narration by default. Use a no-voiceover plan only when the user explicitly asks for silent/subtitle-only/visual-only output.
 
 - Convert or handle English acronyms, mixed Chinese-English terms, and technical terms before production.
-- For Kokoro voiceover, use confirmed Chinese equivalents where appropriate, such as `STEM` -> `科创融合课程`, `PBL` -> `项目化学习`, `GPT` -> `生成式人工智能工具`, and semantic `AI` -> `人工智能`.
+- For Kokoro voiceover, must read [the English-to-Chinese meaning policy](kokoro-english-policy.md). Translate every English item into Chinese meaning, including brand AI; no letter-by-letter or English-pronunciation exception. Preserve approved visual spelling.
 - Keep brand display separate from voiceover wording when needed. If the brand contains English letters, mark the on-screen version and the voiceover version separately.
 - Put unresolved pronunciation choices into the confirmation table and do not synthesize voiceover until they are confirmed.
 - Check that the opening line and closing line speak to B-end institution owners, not parents.
@@ -140,7 +144,7 @@ Bottom placement requirements:
 - Only the main large title may use subtle stroke, shadow, highlight edge, or emboss-like effects. Body text, notes, subtitles, tags, lower-thirds, overlays, chips, labels, and remarks must not use white emboss, white highlight shadow, glow, stroke, or similar decorative readability effects.
 - Do not put internal workflow labels, approval/review wording, asset names, or production notes on visible video frames.
 - If an approved cover exists, reference the current approved file. Do not reuse obsolete covers.
-- The first video frame should match the approved cover title, visual hierarchy, and core business signal. If a separate cover image is exported, it must be derived from the first frame unless the user asks for a variant.
+- The standalone cover preserves the approved topic, title and visual system. Do not require it to be derived from a video frame or overlay its marketing title on a story opening; preserve a specifically approved first-frame-poster choice.
 
 ## Visual Region Rules
 
@@ -170,7 +174,7 @@ Use this structure when creating a new draft:
 - 核心观点：
 - 视觉中心：
 - 关联封面/素材：
-- 第一帧封面：默认视频第一帧即封面；如需单独封面，说明原因
+- 封面与开场：独立通铺双封面；视频按已批准的开场设计，不默认把封面标题烧入视频
 
 ## B端诊断
 
@@ -228,7 +232,7 @@ Remotion动效/节奏/转场：
 
 ## 字幕与排版
 
-- 默认竖版视觉规范：1080 x 1920；大标题 120 pt；正文/辅助文字 60 pt；字幕 40 pt；备注 30 pt；文字底色默认 30% 白色圆角矩形
+- 默认竖版视觉规范：1080 x 1920；大标题 120 px；正文/辅助文字 60 px；字幕 40 px；备注 30 px；文字底色默认 30% 白色圆角矩形
 - Remotion实现必须从已锁定生产契约读取120/60/40/30字号；禁止为了容纳长句在实现阶段擅自缩小字号。应缩短单屏文字、调整时间切片或重排内容，并通过真实字体行盒检查。
 - 圆角：苹果式软圆角，1080 x 1920 画布上可从 24-36 px 起调
 - 文字效果：仅主大标题必要时可用轻微描边/投影/高光边；正文、备注、字幕、标签、lower-third、overlay、chip、label 禁止白色浮雕、高光投影、发光、描边
@@ -263,3 +267,5 @@ Remotion动效/节奏/转场：
 
 - 
 ```
+
+片内文字布局/安全检查必须完整阅读[text-safe-area.md](text-safe-area.md)，按完整文字组（含底板、效果及动效包络）检查；封面裁切坐标不能代替视频安全区。

@@ -45,6 +45,13 @@ if (probeRun.status !== 0) {
     video.width === contract.canvas.width && video.height === contract.canvas.height
       ? pass('dimensions', `${video.width}x${video.height}`)
       : fail('dimensions', `${video.width}x${video.height} != ${contract.canvas.width}x${contract.canvas.height}`);
+    if (contract.resolutionPolicy?.minShortSidePx !== undefined) {
+      const minimum = Number(contract.resolutionPolicy.minShortSidePx);
+      const shortSide = Math.min(Number(video.width), Number(video.height));
+      Number.isFinite(minimum) && minimum >= 1080 && shortSide >= minimum
+        ? pass('minimum-resolution', `${video.width}x${video.height}, short side ${shortSide}px`)
+        : fail('minimum-resolution', `${video.width}x${video.height} below required ${minimum}px short side`);
+    }
     const [num, den] = String(video.r_frame_rate).split('/').map(Number);
     const fps = num / den;
     Math.abs(fps - contract.canvas.fps) < 0.001 ? pass('fps', String(fps)) : fail('fps', `${fps} != ${contract.canvas.fps}`);

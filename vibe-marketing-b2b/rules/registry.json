@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "skill": "vibe-marketing-b2b",
+  "version": "3.2.0",
+  "scopes": [
+    "design",
+    "copy",
+    "cover",
+    "character",
+    "scene",
+    "audio",
+    "edit",
+    "render",
+    "delivery",
+    "server",
+    "recovery"
+  ],
+  "rules": [
+    {
+      "id": "caption-panel-geometry",
+      "file": "rules/caption-panel-geometry.md",
+      "scopes": [
+        "edit"
+      ],
+      "requires": [
+        "caption-segmentation",
+        "text-safe-area"
+      ],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "a5c95a9c6c33340fecc94f11e17e426659df2fcbdd4992faebad9a6528b7367e"
+    },
+    {
+      "id": "caption-segmentation",
+      "file": "rules/caption-segmentation.md",
+      "scopes": [
+        "edit"
+      ],
+      "requires": [
+        "text-safe-area"
+      ],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "cb8e0c63e2053e290af2f73f4ad66f99545aba5103a16ef0192866143f1e265d"
+    },
+    {
+      "id": "cover-delivery",
+      "file": "rules/cover-delivery.md",
+      "scopes": [
+        "cover"
+      ],
+      "requires": [],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "a03ff51f2b81bfa5939b91ba995254aaf15fbb0d623a40405f261deeafa2b19d"
+    },
+    {
+      "id": "cover-formulas",
+      "file": "rules/cover-formulas.md",
+      "scopes": [
+        "cover"
+      ],
+      "requires": [],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "e647a47b9c77fe7564521bfc4eb9ed8eac9aff163733e2bbeb3b254a03357760"
+    },
+    {
+      "id": "deliverables",
+      "file": "rules/deliverables.md",
+      "scopes": [
+        "all"
+      ],
+      "requires": [],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "2d8f222736b4b93d205cb3e3416f1dfc269cdad665fa5f2da65793647d36b4a3"
+    },
+    {
+      "id": "dependencies",
+      "file": "rules/dependencies.md",
+      "scopes": [
+        "audio",
+        "render",
+        "server"
+      ],
+      "requires": [],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "12585bc2cc6ab0673530e106cc87f4b41641a829eb0ba93513ebfd8de50d7623"
+    },
+    {
+      "id": "execution-contract",
+      "file": "rules/execution-contract.md",
+      "scopes": [
+        "all"
+      ],
+      "requires": [],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "e396dbbbf4a4ed796244da63d37380610e7df0d00c1e76083a54315e75327995"
+    },
+    {
+      "id": "kokoro-english-policy",
+      "file": "rules/kokoro-english-policy.md",
+      "scopes": [
+        "audio"
+      ],
+      "requires": [],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "3d8c14979e4225c15be1465cfaa5c6954df93ac10286db8cd97db953715d6825"
+    },
+    {
+      "id": "production-qa-rules",
+      "file": "rules/production-qa-rules.md",
+      "scopes": [
+        "cover",
+        "scene",
+        "render"
+      ],
+      "requires": [
+        "text-safe-area"
+      ],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "f315213fc16ddb3c8827fac253ca53f224d3ff840470faba17b55130add4ae4d"
+    },
+    {
+      "id": "remotion-production-contract",
+      "file": "rules/remotion-production-contract.md",
+      "scopes": [
+        "render"
+      ],
+      "requires": [
+        "text-safe-area"
+      ],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "2d17f9224b2c8636835a41e1b78d94eb1cdbf4e04aa922459103b07ff94fa411"
+    },
+    {
+      "id": "speech-breath-design",
+      "file": "rules/speech-breath-design.md",
+      "scopes": [
+        "audio"
+      ],
+      "requires": [],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "7a9d414631dd9e3ca28d4d9a4bfb11b487f46144df58f869436ff39a2ea65409"
+    },
+    {
+      "id": "video-design-draft",
+      "file": "rules/video-design-draft.md",
+      "scopes": [
+        "design",
+        "scene",
+        "audio",
+        "render"
+      ],
+      "requires": [
+        "text-safe-area"
+      ],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "17d899c6eebaeeb0a5f8c9e3987db186a78e74ebbcb38f8bd6073c95d517802d"
+    },
+    {
+      "id": "voiceover-lexicon",
+      "file": "rules/voiceover-lexicon.md",
+      "scopes": [
+        "audio"
+      ],
+      "requires": [
+        "kokoro-english-policy"
+      ],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "d09c745b4c17c48cbbfde444723387425e6fc6f92a25f3cba124d49e723c5587"
+    },
+    {
+      "id": "workflow",
+      "file": "rules/workflow.md",
+      "scopes": [
+        "all"
+      ],
+      "requires": [],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "231eee3feaef93ea0adcc40135087fd28ae43ab691b361ab7dcd6daf30ccc59c"
+    },
+    {
+      "id": "workspace-layout",
+      "file": "rules/workspace-layout.md",
+      "scopes": [
+        "render"
+      ],
+      "requires": [],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "5640ba7488b333c8308bc26b5a71a404768492825aeba3607cd962c2d9aca3b2"
+    },
+    {
+      "id": "xiaohongshu-taboo",
+      "file": "rules/xiaohongshu-taboo.md",
+      "scopes": [
+        "copy",
+        "cover",
+        "design"
+      ],
+      "requires": [],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "c088d62d8d6930511b68f36f7939c9157d110b182dd6b6b81ccca02b8964cb83"
+    },
+    {
+      "id": "text-safe-area",
+      "file": "rules/text-safe-area.md",
+      "scopes": [
+        "design",
+        "scene",
+        "edit",
+        "render",
+        "delivery"
+      ],
+      "requires": [
+        "execution-contract"
+      ],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "9b0c7f45b624cd9a3d5ec23a3905f2b03e52af988203ce24476d5e19129bde6c"
+    }
+  ],
+  "legacyPaths": {
+    "references/cover-delivery.md": "rules/cover-delivery.md",
+    "references/cover-formulas.md": "rules/cover-formulas.md",
+    "references/kokoro-english-policy.md": "rules/kokoro-english-policy.md",
+    "references/caption-segmentation.md": "rules/caption-segmentation.md",
+    "references/voiceover-lexicon.md": "rules/voiceover-lexicon.md",
+    "references/dependencies.md": "rules/dependencies.md",
+    "references/xiaohongshu-taboo.md": "rules/xiaohongshu-taboo.md",
+    "references/production-qa-rules.md": "rules/production-qa-rules.md",
+    "references/speech-breath-design.md": "rules/speech-breath-design.md",
+    "references/remotion-production-contract.md": "rules/remotion-production-contract.md",
+    "references/caption-panel-geometry.md": "rules/caption-panel-geometry.md",
+    "references/workspace-layout.md": "rules/workspace-layout.md",
+    "references/deliverables.md": "rules/deliverables.md",
+    "references/video-design-draft.md": "rules/video-design-draft.md"
+  },
+  "sharedToolSnapshots": [
+    {
+      "file": "scripts/validate-rule-execution.mjs",
+      "owner": "vibe-marketing-b2b",
+      "sha256": "14d944cc5e21fdd8186dd2b4c4858f11dc95e419bed3fbc41df2006f5d17de5a"
+    },
+    {
+      "file": "scripts/init-rule-execution.mjs",
+      "owner": "vibe-marketing-b2b",
+      "sha256": "c8753747eae0617e3ab1a0f4bb06a978cdbd30f5603ff1b85a0cdc710d24a605"
+    },
+    {
+      "file": "scripts/self-test-rule-execution.mjs",
+      "owner": "vibe-marketing-b2b",
+      "sha256": "5de854d088f331d573c4fb59b4ed687caf55a5c9071831779fda254713f00a75"
+    },
+    {
+      "file": "scripts/validate-dialogue-breath.mjs",
+      "owner": "vibe-marketing-b2b",
+      "sha256": "0519e6b291dadb24bae33860bc6095f35f81f63d4502da16fe65c1d97d739d8a"
+    },
+    {
+      "file": "scripts/self-test-dialogue-breath.mjs",
+      "owner": "vibe-marketing-b2b",
+      "sha256": "4f129a3fe212d404d20231505bc4e5ff92d0b7a5cd84f22ca11649e31b39035f"
+    },
+    {
+      "file": "scripts/caption-policy.mjs",
+      "owner": "vibe-marketing-b2b",
+      "sha256": "1469d0402bda4fcf9825618e975c99eb4371b8b18d75752502b9f98c62053826"
+    },
+    {
+      "file": "scripts/self-test-caption-policy.mjs",
+      "owner": "vibe-marketing-b2b",
+      "sha256": "3e99feebc786759d76761ab87dc08a4ab17f99263b8eba1d95a59cb11dd56ecd"
+    }
+  ]
+}

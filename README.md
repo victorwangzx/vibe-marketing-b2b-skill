@@ -1,6 +1,6 @@
 # Vibe Marketing B2B Skill
 
-Current release: **v2.1.2**. See [CHANGELOG.md](CHANGELOG.md) and the [v2.1.2 release notes](releases/v2.1.2.md).
+Current release: **v3.2.0**. See [CHANGELOG.md](CHANGELOG.md) and the [v3.2.0 release notes](releases/v3.2.0.md).
 
 Create B2B vibe-marketing strategy, platform-native copy, cover concepts, and short-video production plans for partnership acquisition, especially education and training institutions that need a new growth product line.
 
@@ -19,6 +19,7 @@ This Codex skill is not a generic marketing prompt. It treats B2B content as a b
 - Works as both a strategy skill and a production-prep skill before Remotion video rendering.
 - Ships a render-blocking Remotion production contract gate for typography, line breaks, text-panel opacity/radius/padding, narration timing, media integrity, lip-sync approval, and post-render QA.
 - Uses distinct default vertical-video tokens: title 120 pt, body 60 pt, captions 40 pt, and notes 30 pt.
+- Analyzes the core message and primary/secondary sentence stress before narration synthesis, then verifies prominence by contextual listening.
 
 ## When To Use
 
@@ -91,15 +92,15 @@ The initializer is idempotent. Re-running it creates only missing directories an
 ## Repository Structure
 
 - `vibe-marketing-b2b/SKILL.md`: main skill workflow, positioning logic, and delivery discipline.
-- `vibe-marketing-b2b/references/deliverables.md`: output types and minimum requirements.
-- `vibe-marketing-b2b/references/cover-formulas.md`: cover-title and scene formulas.
-- `vibe-marketing-b2b/references/xiaohongshu-taboo.md`: Xiaohongshu risk and tone guardrails.
-- `vibe-marketing-b2b/references/video-design-draft.md`: pre-render video draft structure.
-- `vibe-marketing-b2b/references/production-qa-rules.md`: QA rules for covers, videos, and platform packages.
-- `vibe-marketing-b2b/references/remotion-production-contract.md`: mandatory production-contract workflow for final Remotion videos.
-- `vibe-marketing-b2b/references/workspace-layout.md`: standard local task-folder layout and directory ownership.
+- `vibe-marketing-b2b/rules/deliverables.md`: output types and minimum requirements.
+- `vibe-marketing-b2b/rules/cover-formulas.md`: cover-title and scene formulas.
+- `vibe-marketing-b2b/rules/xiaohongshu-taboo.md`: Xiaohongshu risk and tone guardrails.
+- `vibe-marketing-b2b/rules/video-design-draft.md`: pre-render video draft structure.
+- `vibe-marketing-b2b/rules/production-qa-rules.md`: QA rules for covers, videos, and platform packages.
+- `vibe-marketing-b2b/rules/remotion-production-contract.md`: mandatory production-contract workflow for final Remotion videos.
+- `vibe-marketing-b2b/rules/workspace-layout.md`: standard local task-folder layout and directory ownership.
 - `vibe-marketing-b2b/references/revision-history.md`: maintained workflow version history.
-- `vibe-marketing-b2b/references/dependencies.md`: optional production dependencies.
+- `vibe-marketing-b2b/rules/dependencies.md`: optional production dependencies.
 - `vibe-marketing-b2b/scripts/`: contract locking, preflight, post-render audit, and regression-test scripts.
 - `vibe-marketing-b2b/scripts/init-workspace.mjs`: safe, repeatable task-workspace initializer.
 - `examples/`: representative covers and a video design draft.
@@ -111,14 +112,14 @@ Strategy, copy, and design drafts do not require media dependencies.
 Full video production may require a local video toolchain. The dependency notes are kept in:
 
 ```text
-vibe-marketing-b2b/references/dependencies.md
+vibe-marketing-b2b/rules/dependencies.md
 ```
 
 The skill defaults to draft-first production: create an editable Markdown video design draft, wait for confirmation, then render only when the user asks to proceed.
 
 Starting with v2.0.0, final Remotion delivery is contract-gated. In v2.1.0, the gate also blocks text-panel drift: the default `30% white` background, `24-36 px` corner radius, and at least `48 px` horizontal padding must be contract tokens used by every declared panel selector. v2.1.1 additionally treats approved evidence clips as immutable: preserve the exact source range and aspect ratio, use whole-frame scaling, honor an explicit 80% canvas-width rule, and keep overlays clear of Victor's face. Central placement may overlap a hand gesture. The approved draft is translated into `production-contract.json`, locked, and consumed directly by Remotion. The preflight blocks typography drift, orphan lines, panel-style violations, punctuation-timing errors, checksum mismatches, timeline gaps, unapproved visible-speaker shots, and policy violations before rendering. The post-render audit checks media start times, decode, duration, loudness, true peak, and isolated flashes.
 
-The layout gate requires Playwright and a Chromium-compatible browser. The post-render gate requires FFmpeg and FFprobe. See [`references/remotion-production-contract.md`](vibe-marketing-b2b/references/remotion-production-contract.md) for configuration and commands.
+The layout gate requires Playwright and a Chromium-compatible browser. The post-render gate requires FFmpeg and FFprobe. See [`references/remotion-production-contract.md`](vibe-marketing-b2b/rules/remotion-production-contract.md) for configuration and commands.
 
 ## Customization Ideas
 
@@ -130,7 +131,7 @@ Fork this skill if you want to adapt it for:
 - Another education segment, such as study tours, robotics, art education, STEM camps, or AI literacy.
 - A stricter sales funnel with CRM fields, qualification scoring, and follow-up scripts.
 
-The best starting points are `vibe-marketing-b2b/SKILL.md` and the files under `vibe-marketing-b2b/references/`.
+The best starting points are `vibe-marketing-b2b/SKILL.md` and the files under `vibe-marketing-b2b/rules/`.
 
 ## Boundary
 
