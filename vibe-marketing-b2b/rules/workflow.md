@@ -2,7 +2,7 @@
 
 Default vertical-video typography is: title `120 px`, body `60 px`, subtitle/caption `40 px`, and note/remark `30 px`. For Remotion, these are separately locked production-contract tokens; captions must not inherit the body token.
 
-Current workflow version: **v3.2.0**.
+Current workflow version: **v4.0.1**.
 
 For new rendered videos, lock the final canvas before artwork, layout and motion production: vertical 9:16 deliverables must be at least **1080×1920** (and landscape 16:9 at least **1920×1080**). Render titles, captions and graphics on that final-size canvas and verify the actual exported MP4 dimensions before delivery. A 720×1280 edit enlarged only at export is not proof of native 1080P visual quality; inspect source detail and final-size frames. This prospective rule does not require remaking already approved or published videos. A different size requires the user's explicit choice.
 
@@ -122,7 +122,7 @@ Before any new/revised narration, **must read and follow** [semantic breath timi
 
 For narrated B2B videos, the contract default for `。？！` is a complete **0.40-second** sentence-ending pause with **±0.03-second** automated tolerance; `，、：；` use their distinct non-overlapping tiers in the mandatory semantic-breath reference. A different cadence requires explicit approval before production and must be recorded in the contract. When a readable narrator mouth is present, matching audio samples and timeline offset are necessary but not sufficient: the proof clip also requires normal-speed human lip-sync review.
 
-Default final package for every complete Xiaohongshu/Douyin B2B content item is: rendered video; a standalone full-bleed 9:16 poster cover aligned with the film’s topic and hook; a separately composed 4:3 Toutiao-style landscape banner cover; publishable post title; editor's note; and exactly 5 relevant hot tags. Both cover files are mandatory even if no Toutiao article is requested. They must use the same approved strategy and cover-detail rules, but must never be created by cropping or stretching one another. For Xiaohongshu, the final title must contain no more than 20 visible characters in total, counting punctuation and emoji, as defined in `rules/xiaohongshu-taboo.md`. When a Toutiao article is included, also provide the article and exactly 5 related Toutiao tags. If the user asks only for planning or drafting, stop at the requested pre-production deliverable.
+Default final package for every complete Xiaohongshu/Douyin B2B content item is: rendered video; a standalone full-bleed 9:16 poster cover aligned with the film’s topic and hook; a separately composed 4:3 Toutiao-style landscape banner cover; publishable post title; editor's note; and exactly 5 relevant hot tags. Both cover files are mandatory even if no Toutiao article is requested. They must use the same approved strategy and cover-detail rules, but must never be created by cropping or stretching one another. For Xiaohongshu, normally write the publishable title to 15–20 visible characters, with a hard maximum of 20 counting punctuation and emoji, as defined in `rules/xiaohongshu-taboo.md`. Keep the cover title concise and independently hooked; the two titles should create truthful contrast and complementary information rather than repeat each other. When a Toutiao article is included, also provide the article and exactly 5 related Toutiao tags. If the user asks only for planning or drafting, stop at the requested pre-production deliverable.
 
 ## Cover Formulas
 
