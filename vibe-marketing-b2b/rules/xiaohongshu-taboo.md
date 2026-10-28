@@ -20,7 +20,7 @@ Before drafting each Xiaohongshu post, state briefly which numbered rules are be
 Default publishing limits and style:
 
 - Every publishable Xiaohongshu copy delivery must include a post title unless the user explicitly requests body copy only. If the user has approved a title, preserve it rather than silently rewriting it.
-- The final Xiaohongshu post title must contain no more than 20 visible characters in total. Count all Chinese characters, letters, numbers, spaces, punctuation marks, symbols, and emoji in the delivered title; punctuation and emoji are not excluded from the limit. Treat a title over 20 characters as a delivery defect and shorten it before delivery.
+- The final Xiaohongshu post title should normally use **15–20 visible characters** so it has enough space to identify the target reader, business situation, conflict, or decision value while still fitting the platform limit. The hard maximum is **20 visible characters**. Count all Chinese characters, letters, numbers, spaces, punctuation marks, symbols, and emoji; punctuation and emoji are not excluded. A title shorter than 15 characters is allowed only when the shorter wording is demonstrably clearer or when the user has approved it; do not pad with empty adjectives, repeated punctuation, or unrelated emoji merely to reach 15. Treat a title over 20 characters as a delivery defect and shorten it before delivery.
 - Keep draft body copy under 800 Chinese characters by default so the user retains editing room.
 - Never exceed 10 hashtags. For the complete B2B platform package defined by this skill, deliver exactly 5 relevant hot tags unless the user requests another count.
 - Use restrained, topic-aligned emoji in lists, section-like lines, and viewpoint summaries. For education content, prefer warm clear symbols such as 🎨, 🌱, 🏫, 📚, 🫶, ✨, 📝, and 🌈; avoid clutter or an excessively cute tone.
@@ -87,8 +87,8 @@ Match the closing prompt to the post's actual pain point. Do not force every clo
 
 ## 封面标题与发布标题分别撰写
 
-封面标题（封面图上叠加的文字）与发布文案标题是两个独立字段，必须分别撰写、记录和检查，不能使用同一句标题。封面标题负责信息流中迅速看懂主题/冲突，发布标题负责具体对象、问题或收获；两者兑现同一内容承诺，不增加未经证实的利益点。仅改标点、空格、换行或字符大小写不算不同标题。允许9:16与4:3封面共用同一封面标题。
+封面标题（封面图上叠加的文字）与发布文案标题是两个独立字段，必须分别撰写、记录和检查，不能使用同一句标题。封面标题负责在信息流中以尽量简洁、快速、有冲击力的表达抓住视线，可使用噱头、反差、悬念、问题、认知冲突或业务机会信号；发布标题负责补足目标对象、具体场景、核心判断或阅读收获，通常写到15—20个可见字符。两者兑现同一内容承诺，不增加未经证实的利益点。仅改标点、空格、换行或字符大小写不算不同标题。允许9:16与4:3封面共用同一封面标题。
 
-双标题必须形成可说明的互补关系，而非同义改写。封面标题优先承载可核验的**事实、数据、政策方向或结果信号**，让人一眼看见值得停留的主题；发布标题可侧重面向目标受众的**营销引导、专业判断或真实感慨**，说明这条内容能帮助谁看懂什么机制、方向或下一步。优先采用“**事实/政策方向 → 营销判断**”“**结果信号 → 机制/下一步追问**”或“**具体对象 → 可获得的决策收获**”。发布标题中的判断或感慨须和封面事实兑现同一承诺，并清楚保持事实与分析的边界。记录实际`titleRelationship`及其兑现位置；发布标题仍须遵守不超过20个可见字符的限制，不能为制造互补而扩写成第二段文案或加入未经证实的承诺。
+双标题必须形成可说明的**互补与反差关系**，而非同义改写。封面标题可以从意外判断、尖锐问题、反常识、损失风险、机会信号、事实、数据、政策方向或结果信号切入；发布标题再从目标受众、真实场景、原因机制、专业判断或可获得的决策收获切入。优先形成“**封面制造认知缺口 → 发布标题说明为什么值得看**”的连续兴趣，例如“**反常识/噱头 → 对象与机制**”“**问题/风险 → 判断与下一步**”“**事实/结果信号 → 营销判断**”。反差只能来自角度、语气和信息层次，不能让两个标题的事实结论互相矛盾，也不能用正文无法兑现的夸张承诺骗取点击。记录实际`titleRelationship`、`contrastMechanism`及其正文兑现位置；发布标题通常15—20个可见字符且硬上限20，不能为制造反差而扩写成第二段文案或加入未经证实的承诺。
 
 交付前将实际封面文字与实际发布标题并排核对，去除空格、标点并忽略大小写后相同则不通过，再人工检查是否只是机械换词。已明确批准的同名组合不得静默改写：保留批准证据，指出冲突并提出最小改动候选，按现有决策锁确认后替换。单独交付文案如已有封面须读取实际文字；尚无封面则记录待配对，不声称整包通过。策略使用说明与逐条自检只存在生产记录，不混入可直接发布的正文。
