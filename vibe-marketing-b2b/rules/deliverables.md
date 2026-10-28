@@ -45,7 +45,7 @@ For a full Xiaohongshu/Douyin-style B2B content item, the final deliverables are
 - Rendered short video.
 - A standalone full-bleed 9:16 poster cover, aligned with the approved film topic and hook.
 - A separately composed 4:3 Toutiao-style landscape banner-cover file. It is required for every complete content package, not only when a Toutiao article is requested.
-- Publishable post title. For Xiaohongshu, it must pass the title limit and counting rule in `xiaohongshu-taboo.md`.
+- Publishable post title. For Xiaohongshu, normally use 15–20 visible characters and always pass the hard limit and counting rule in `xiaohongshu-taboo.md`.
 - Editor's note/body copy.
 - Exactly 5 related hot tags.
 
@@ -97,7 +97,7 @@ Use when the user asks for one content item such as "给某类机构做一条科
 
 Must include:
 
-- Publishable post title and cover headline. They may use the same approved wording, but the post title must still be delivered explicitly rather than implied by the cover.
+- Publishable post title and cover headline as separate fields. For Xiaohongshu they must not use the same wording: the concise cover headline may use a truthful hook, contrast or opportunity signal, while the 15–20-character publishable title adds audience, situation, judgment or reading value. Record how their contrast is resolved by the actual content.
 - Cover/first-frame design: platform ratio, title hierarchy, visual subject, text-safe area, and what must not be covered.
 - Editor's note/body copy: usually 100-200 Chinese characters when requested for Xiaohongshu; concise, credible, and self-screening.
 - Exactly 5 related hot tags for the target platform and topic.
@@ -133,7 +133,7 @@ Hard requirements:
 - Do not put internal workflow labels, approval/review wording, or agent-to-user production notes on the visible cover.
 - Do not cover faces, hands, project work, parent expressions, teacher actions, or the visual contrast that explains the scene.
 - Do not use large full-width masks or bottom panels merely to make text readable.
-- Only the main large title may use subtle stroke, shadow, highlight edge, or emboss-like effects when needed. Body text, notes, tags, chips, labels, and supporting phrases must not use white emboss, white highlight shadow, glow, stroke, or similar effects.
+- All audience-facing text, including main and cover titles, must be delivered without glyph strokes or outlines. Do not simulate a contour with multi-direction shadows, highlight edges, glow, embossing, or duplicated offset text. Use solid fills, real font weight, small local panels, quiet placement, local gradients, and tonal contrast instead; non-text graphic borders and lines are unaffected.
 - Text chips, bubbles, and panels must be sized from actual text length and aligned visually.
 
 QA:
