@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.0.1 - 2026-10-28
+
+- Recommended 15–20 visible characters for Xiaohongshu publishable titles, retaining 20 as the hard maximum including punctuation and emoji.
+- Allowed concise cover titles to use truthful hooks, contrast, suspense, questions, or opportunity signals.
+- Required complementary contrast between cover and publishable titles without factual contradiction or clickbait.
+- Removed the conflicting legacy allowance for identical cover and publishable titles.
+
 ## v3.2.0 - 2026-10-28
 
 - Added mandatory core-message and sentence-stress analysis before breath planning or synthesis.
