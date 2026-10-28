@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "skill": "vibe-marketing-b2b",
-  "version": "3.2.0",
+  "version": "4.0.1",
   "scopes": [
     "design",
     "copy",
@@ -49,7 +49,7 @@
       ],
       "requires": [],
       "owner": "vibe-marketing-b2b",
-      "sha256": "a03ff51f2b81bfa5939b91ba995254aaf15fbb0d623a40405f261deeafa2b19d"
+      "sha256": "5db4d4c7f39ab954aeba372fea20ec092483e3142edda5bccc3efddcbeb71cd3"
     },
     {
       "id": "cover-formulas",
@@ -59,7 +59,7 @@
       ],
       "requires": [],
       "owner": "vibe-marketing-b2b",
-      "sha256": "e647a47b9c77fe7564521bfc4eb9ed8eac9aff163733e2bbeb3b254a03357760"
+      "sha256": "7ebfe765dd053cf30a9bc37ddb73a2c95d273c981f2848da6a6e4c7d21b98b9d"
     },
     {
       "id": "deliverables",
@@ -69,7 +69,7 @@
       ],
       "requires": [],
       "owner": "vibe-marketing-b2b",
-      "sha256": "2d8f222736b4b93d205cb3e3416f1dfc269cdad665fa5f2da65793647d36b4a3"
+      "sha256": "175cd8e32447699880a865be8237f0b1f66e8dae1744b43f2040ed4c3f332c56"
     },
     {
       "id": "dependencies",
@@ -115,7 +115,7 @@
         "text-safe-area"
       ],
       "owner": "vibe-marketing-b2b",
-      "sha256": "f315213fc16ddb3c8827fac253ca53f224d3ff840470faba17b55130add4ae4d"
+      "sha256": "757872f0087c3ebeb3941985392c8aeab3d54de8897b4aec1cd71d60dfc1c87b"
     },
     {
       "id": "remotion-production-contract",
@@ -152,7 +152,7 @@
         "text-safe-area"
       ],
       "owner": "vibe-marketing-b2b",
-      "sha256": "17d899c6eebaeeb0a5f8c9e3987db186a78e74ebbcb38f8bd6073c95d517802d"
+      "sha256": "83589c6c670ff9781a45aedf3e902943983bfe7209bee17b892d3c0fe33c6a38"
     },
     {
       "id": "voiceover-lexicon",
@@ -174,7 +174,7 @@
       ],
       "requires": [],
       "owner": "vibe-marketing-b2b",
-      "sha256": "231eee3feaef93ea0adcc40135087fd28ae43ab691b361ab7dcd6daf30ccc59c"
+      "sha256": "df3277002e70d07213799ecbf6755222233a783f874869b1d56e009da0bc2cfd"
     },
     {
       "id": "workspace-layout",
@@ -196,7 +196,7 @@
       ],
       "requires": [],
       "owner": "vibe-marketing-b2b",
-      "sha256": "c088d62d8d6930511b68f36f7939c9157d110b182dd6b6b81ccca02b8964cb83"
+      "sha256": "629c755f7af314718778bc81f56345a97b9d46a3456d31273434287fbd56ece7"
     },
     {
       "id": "text-safe-area",
@@ -212,7 +212,7 @@
         "execution-contract"
       ],
       "owner": "vibe-marketing-b2b",
-      "sha256": "9b0c7f45b624cd9a3d5ec23a3905f2b03e52af988203ce24476d5e19129bde6c"
+      "sha256": "4fb62cf9fa2760444562a35c8ad21d07602719a03f423d185b624e7f21ca872c"
     }
   ],
   "legacyPaths": {
