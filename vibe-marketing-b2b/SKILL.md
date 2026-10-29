@@ -3,7 +3,7 @@ name: vibe-marketing-b2b
 description: Create 2B vibe marketing strategy, content matrices, Xiaohongshu/Douyin cover concepts, Toutiao/头条号 articles and covers, and sales funnel copy for business partnerships, especially education/training机构合作获客.
 metadata:
   short-description: B2B vibe marketing production
-  version: "4.0.1"
+  version: "4.1.0"
 ---
 
 # Vibe Marketing B2B
@@ -22,6 +22,6 @@ metadata:
 
 ## 调用与维护
 
-规范目录重组后的当前本地版本为 **v4.0.1**。旧路径映射见[rules/registry.json](rules/registry.json)；恢复旧项目时据映射定位当前规范，不能因旧路径失效跳过。发行包只保留最新可用版本；独立包携带注明来源并校对一致的共享规范快照。维护记录见[README.md](README.md)。本次更新不授权安装、改声音或重制旧视频。
+规范目录重组后的当前本地版本为 **v4.1.0**。本版新增高注意力封面的统一画面合同，覆盖主体、真实场景、人物状态、单焦点、对比、证据、原生感、缩略图和局部底板。旧路径映射见[rules/registry.json](rules/registry.json)；恢复旧项目时据映射定位当前规范，不能因旧路径失效跳过。发行包只保留最新可用版本；独立包携带注明来源并校对一致的共享规范快照。维护记录见[README.md](README.md)。本次更新不授权安装、改声音或重制旧视频。
 
 视频文字、字幕及底色/动效边界必须执行[rules/text-safe-area.md](rules/text-safe-area.md)，不得把封面裁切profile用作片内安全区。
