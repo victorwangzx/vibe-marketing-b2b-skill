@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "skill": "vibe-marketing-b2b",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "scopes": [
     "design",
     "copy",
@@ -47,9 +47,11 @@
       "scopes": [
         "cover"
       ],
-      "requires": [],
+      "requires": [
+        "cover-style-defaults"
+      ],
       "owner": "vibe-marketing-b2b",
-      "sha256": "5db4d4c7f39ab954aeba372fea20ec092483e3142edda5bccc3efddcbeb71cd3"
+      "sha256": "f25db09862a5dca5a65c8c28eae14fd0aa73b1ebe3c664198ed49c32bc31afda"
     },
     {
       "id": "cover-formulas",
@@ -59,7 +61,7 @@
       ],
       "requires": [],
       "owner": "vibe-marketing-b2b",
-      "sha256": "7ebfe765dd053cf30a9bc37ddb73a2c95d273c981f2848da6a6e4c7d21b98b9d"
+      "sha256": "2e9848fb7c5f9275e945ff6496f63d189e888d2b30421a928bbcb9046ed09b51"
     },
     {
       "id": "deliverables",
@@ -174,7 +176,7 @@
       ],
       "requires": [],
       "owner": "vibe-marketing-b2b",
-      "sha256": "df3277002e70d07213799ecbf6755222233a783f874869b1d56e009da0bc2cfd"
+      "sha256": "e1d3c9a89b21c6f92c6730a860e82d28ed6bc0443e5247c2beb745ed100b0bf5"
     },
     {
       "id": "workspace-layout",
@@ -213,6 +215,16 @@
       ],
       "owner": "vibe-marketing-b2b",
       "sha256": "4fb62cf9fa2760444562a35c8ad21d07602719a03f423d185b624e7f21ca872c"
+    },
+    {
+      "id": "cover-style-defaults",
+      "file": "rules/cover-style-defaults.json",
+      "scopes": [
+        "cover"
+      ],
+      "requires": [],
+      "owner": "vibe-marketing-b2b",
+      "sha256": "e937df25e69df6ec48f29ed66d70deaab5ed6fc4a7342ddc81248ff2f9892799"
     }
   ],
   "legacyPaths": {
@@ -266,6 +278,16 @@
       "file": "scripts/self-test-caption-policy.mjs",
       "owner": "vibe-marketing-b2b",
       "sha256": "3e99feebc786759d76761ab87dc08a4ab17f99263b8eba1d95a59cb11dd56ecd"
+    },
+    {
+      "file": "scripts/validate-cover-panels.mjs",
+      "owner": "vibe-marketing-b2b",
+      "sha256": "ca8f9802a5bfe1ca0f1a751df59dde6bbf3d655a96a7f055ca4061e03d440254"
+    },
+    {
+      "file": "scripts/self-test-cover-panels.mjs",
+      "owner": "vibe-marketing-b2b",
+      "sha256": "a162b479975563ca656e57b2f4e5a497b9d2e7c5042825507532476e9f9cef57"
     }
   ]
 }
