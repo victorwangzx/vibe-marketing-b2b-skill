@@ -6,6 +6,8 @@ Use these formulas for Xiaohongshu group images, Douyin short-video covers,朋�
 
 When designing covers, do not optimize only for curiosity clicks. Optimize for qualified partnership leads. A good cover names the current institution type, names the new opportunity, and includes a filter when mismatched leads are likely.
 
+The picture itself must satisfy the mandatory [高注意力封面画面合同](cover-delivery.md#高注意力封面的画面合同): a recognizable real scene, clear subject, readable human state, one dominant focus, visible conflict/change or evidence, restrained hierarchy and color, a natural quiet text zone, platform-native visual texture, thumbnail-safe composition and only local backing when needed. Formula choice never overrides those picture requirements.
+
 ## Formula Overview
 
 The 10 reusable cover types are:
@@ -49,7 +51,7 @@ Default canvas: 1080 x 1920.
 - Main title, subtitle, key qualifier, and speech-bubble bodies must stay inside this safe box.
 - Speech-bubble tails or visual pointers may extend slightly outside the safe box only when they do not cover faces, hands, key objects, or the action that explains the scene.
 - Keep at least 48 px of apparent padding between text and its panel, label, chip, or bubble edge. Align text by visible glyph bounds, not baseline-only offsets.
-- Use local typography or small semi-transparent panels in low-information areas for readability. Only the main large title may use subtle stroke, shadow, highlight edge, or emboss-like effects when needed; body text, notes, tags, chips, labels, and supporting phrases must not use white emboss, white highlight shadow, glow, stroke, or similar decorative readability effects.
+- Use local typography or small semi-transparent panels in low-information areas for readability. Every cover text layer, including the main title, must remain free of glyph strokes and outlines. Do not simulate contours with multi-direction shadows, highlight edges, glow, embossing, or duplicated offset text.
 - Do not use broad full-width masks, top/bottom overlays, or large gray/color veils that change half of the image's tone just to make text readable.
 - Text panels, labels, and bubbles must not cover core visual information: faces, hands, children's project work, teacher actions, parent expressions, product evidence, or the contrast that makes the cover persuasive.
 
@@ -62,7 +64,7 @@ Use these defaults for Xiaohongshu/Douyin 9:16 covers, video first frames, and v
 - Canvas: `1080 x 1920`.
 - Write and design visible copy for the actual target audience, not for the user. Do not place internal workflow labels such as "选题", "交付", "素材", "脚本", "设计稿", "版本", or approval/review wording on the visible artifact.
 - The visual must use a recognizable scene or clearly reserved text area. Do not treat abstract shapes, generic icon cards, or hard-to-identify programmatic drawings as scene evidence.
-- Main title: `120 px`, preferably Alimama ShuHeiTi. It may use a subtle stroke, shadow, or highlight edge only when needed for hierarchy or readability.
+- Main title: `120 px`, preferably Alimama ShuHeiTi. It must not use glyph strokes or outlines; establish hierarchy with scale, fill, real weight, spacing, placement, a small local panel, local gradient, or tonal contrast.
 - Body/supporting text: `60 px`, preferably Alibaba PuHuiTi Medium. Do not add white emboss, white highlight shadow, glow, stroke, or similar effects.
 - Subtitle/caption text: `40 px`, preferably Alibaba PuHuiTi Medium. Do not add white emboss, white highlight shadow, glow, stroke, or similar effects.
 - Note/remark text: `30 px`, preferably Alibaba PuHuiTi Regular. Do not add white emboss, white highlight shadow, glow, stroke, or similar effects.
@@ -218,3 +220,6 @@ Before delivering cover concepts, check:
 - Is the main title short enough to read in 3 seconds?
 - Is there one strong point instead of several competing claims?
 - Will this attract qualified 科创赛考 partnership leads instead of institutions looking for subject-specific competitions, such as English contests?
+- Without reading the title, can the target owner still identify the setting, main subject and basic action/state?
+- Is there one dominant visual focus, with emotion plus concrete scene/result evidence rather than a posed person or abstract poster?
+- Does the full-size image and middle 3:4 thumbnail preserve the subject, action, contrast and natural text zone without a broad veil or large backing block?
