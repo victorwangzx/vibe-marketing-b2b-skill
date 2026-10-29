@@ -2,7 +2,7 @@
 
 Default vertical-video typography is: title `120 px`, body `60 px`, subtitle/caption `40 px`, and note/remark `30 px`. For Remotion, these are separately locked production-contract tokens; captions must not inherit the body token.
 
-Current workflow version: **v4.0.1**.
+Current workflow version: **v4.1.0**.
 
 For new rendered videos, lock the final canvas before artwork, layout and motion production: vertical 9:16 deliverables must be at least **1080×1920** (and landscape 16:9 at least **1920×1080**). Render titles, captions and graphics on that final-size canvas and verify the actual exported MP4 dimensions before delivery. A 720×1280 edit enlarged only at export is not proof of native 1080P visual quality; inspect source detail and final-size frames. This prospective rule does not require remaking already approved or published videos. A different size requires the user's explicit choice.
 
