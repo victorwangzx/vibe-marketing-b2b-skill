@@ -1,6 +1,6 @@
 # Vibe Marketing B2B Skill
 
-Current release: **v4.0.1**. See [CHANGELOG.md](CHANGELOG.md) and the [v4.0.1 release notes](releases/v4.0.1.md).
+Current release: **v4.1.0**. See [CHANGELOG.md](CHANGELOG.md) and the [v4.1.0 release notes](releases/v4.1.0.md).
 
 Create B2B vibe-marketing strategy, platform-native copy, cover concepts, and short-video production plans for partnership acquisition, especially education and training institutions that need a new growth product line.
 
@@ -14,7 +14,8 @@ This Codex skill is not a generic marketing prompt. It treats B2B content as a b
 
 - Turns vague B2B content ideas into audience-fit diagnosis, funnel logic, and concrete deliverables.
 - Designed for education/training cooperation scenarios such as 科创赛考, AI智绘教室, AI literacy, robotics, science experiments, and second-growth-line packaging.
-- Handles Xiaohongshu/Douyin-style covers, editor notes, hot tags, short-video scripts, and editable video design drafts. Xiaohongshu publishable titles normally use 15–20 visible characters, while concise cover titles may use truthful hooks and contrast.
+- Handles Xiaohongshu/Douyin-style covers, editor notes, hot tags, short-video scripts, and editable video design drafts.
+- Uses one high-attention cover scene contract for recognizable real settings, clear subjects, readable human states, single-focus composition, visible contrast/evidence, thumbnail safety, and local text backing. Xiaohongshu publishable titles normally use 15–20 visible characters, while concise cover titles may use truthful hooks and contrast.
 - Includes compliance and quality rules for lead filtering, platform tone, visual QA, and mixed Chinese-English voiceover terms.
 - Works as both a strategy skill and a production-prep skill before Remotion video rendering.
 - Ships a render-blocking Remotion production contract gate for typography, line breaks, text-panel opacity/radius/padding, narration timing, media integrity, lip-sync approval, and post-render QA.
